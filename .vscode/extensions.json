@@ -1,0 +1,8 @@
+{
+    "recommendations": [
+        "esbenp.prettier-vscode",
+        "gruntfuggly.todo-tree",
+        "pkief.material-icon-theme",
+        "formulahendry.auto-rename-tag"
+    ]
+}
