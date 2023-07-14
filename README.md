@@ -15,12 +15,12 @@ O usuários devem ser capazes de:
 
 -   Funcionalidades principais:
 
-    -   Ver todos os países da API na página inicial.
-    -   Pesquisar um país usando um campo `input`.
-    -   Filtrar países por região.
-    -   Clicar em um país para ver informações mais detalhadas em uma página separada.
-    -   Clicar nos países de fronteira na página de detalhes.
-    -   Alternar o esquema de cores entre o modo claro e escuro.
+    [ ] Ver todos os países da API na página inicial.
+    [ ] Pesquisar um país usando um campo `input`.
+    [ ] Filtrar países por região.
+    [ ] Clicar em um país para ver informações mais detalhadas em uma página separada.
+    [ ] Clicar nos países de fronteira na página de detalhes.
+    [ ] Alternar o esquema de cores entre o modo claro e escuro.
 
 -   Funcionalidades extras:
     <br>
@@ -35,14 +35,14 @@ O usuários devem ser capazes de:
 
 -   Bibliotecas:
 
-    -   [React.js](https://react.dev/learn 'documentação do react.js')
-    -   [React Router Dom](https://reactrouter.com/en/main 'documentação do react router dom')
-    -   [React icons](https://react-icons.github.io/react-icons/ 'documentação do react icons')
+    -   [React.js](https://react.dev/learn "documentação do react.js")
+    -   [React Router Dom](https://reactrouter.com/en/main "documentação do react router dom")
+    -   [React icons](https://react-icons.github.io/react-icons/ "documentação do react icons")
 
 -   Outras:
 
-    -   [Sass](https://sass-lang.com/documentation/ 'documentação do sass')
-    -   [vite](https://vitejs.dev/guide/ 'documentação do vite')
+    -   [Sass](https://sass-lang.com/documentation/ "documentação do sass")
+    -   [vite](https://vitejs.dev/guide/ "documentação do vite")
 
 ## :gear: Rodando o projeto
 
