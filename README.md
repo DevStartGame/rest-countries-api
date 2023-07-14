@@ -99,7 +99,7 @@ Também se faz necessário da instalação das seguintes extensões para a organ
     </td>
     <td align="center">
       <a href="http://github.com/Luiz-Honorato">
-        <img src="https://avatars.githubusercontent.com/u/56259137?v=4" width="100px;" alt="Foto de Tati Alves no GitHub"/><br>
+        <img src="https://avatars.githubusercontent.com/u/105612296?v=4" width="100px;" alt="Foto de Luiz Honorato no GitHub"/><br>
         <sub>
           <b>Luiz Honorato</b>
         </sub>
