@@ -1,0 +1,24 @@
+# EditorConfig: https://EditorConfig.org
+
+# Este arquivo garante que o código esteja formatado corretamente independentemente
+# do editor ou do sistema operacional ou membro da equipe esteja trabalhando no código.
+
+## TODO: A extensão do Editor Config deve estar instalada no seu editor.
+
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+indent_size = 4
+indent_style = space
+max_line_length = 120
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.md]
+max_line_length = 0
+trim_trailing_whitespace = false
+
+[COMMIT_EDITMSG]
+max_line_length = 0
