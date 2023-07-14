@@ -15,12 +15,12 @@ O usuários devem ser capazes de:
 
 -   Funcionalidades principais:
 
-    [] Ver todos os países da API na página inicial.
-    [] Pesquisar um país usando um campo `input`.
-    [] Filtrar países por região.
-    [] Clicar em um país para ver informações mais detalhadas em uma página separada.
-    [] Clicar nos países de fronteira na página de detalhes.
-    [] Alternar o esquema de cores entre o modo claro e escuro.
+    -   [] Ver todos os países da API na página inicial.
+    -   [] Pesquisar um país usando um campo `input`.
+    -   [] Filtrar países por região.
+    -   [] Clicar em um país para ver informações mais detalhadas em uma página separada.
+    -   [] Clicar nos países de fronteira na página de detalhes.
+    -   [] Alternar o esquema de cores entre o modo claro e escuro.
 
 -   Funcionalidades extras:
     <br>
