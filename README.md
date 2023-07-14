@@ -24,6 +24,7 @@ O usuários devem ser capazes de:
 
 -   Funcionalidades extras:
     <br>
+    <br>
 
 <!--
 ## :soon: Implementação futura
