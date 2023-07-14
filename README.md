@@ -1,61 +1,133 @@
-# Frontend Mentor - REST Countries API with color theme switcher
+<h1 align="center">:file_cabinet: Projeto React.js 01</h1>
+<br>
+
+## :memo: Descrição
+
+Um aplicativo para fazer uma integração com o [REST Countries API](https://restcountries.com) para extrair os dados do país e exibi-los em tela.
+
+## :desktop_computer: Frontend Mentor - REST Countries API with color theme switcher
 
 ![Pré-visualização de design para a API de países REST com desafio de codificação do alternador de tema de cores](./design/desktop-preview.jpg)
 
-## Bem-vindo(a)! 👋
+## :books: Funcionalidades
 
-Obrigado por verificar este desafio de codificação de front-end.
+O usuários devem ser capazes de:
 
-[Frontend Mentor](https://www.frontendmentor.io) desafios ajudam você a melhorar suas habilidades de codificação criando projetos realistas.
+-   Funcionalidades principais:
 
-**Para fazer este desafio, você precisa de um bom conhecimento de HTML, CSS e JavaScript.**
+    -   Ver todos os países da API na página inicial.
+    -   Pesquisar um país usando um campo `input`.
+    -   Filtrar países por região.
+    -   Clicar em um país para ver informações mais detalhadas em uma página separada.
+    -   Clicar nos países de fronteira na página de detalhes.
+    -   Alternar o esquema de cores entre o modo claro e escuro.
 
-## O desafio
+-   Funcionalidades extras:
+    <br>
 
-Seu desafio é fazer a integração com o [REST Countries "API"](https://restcountries.com) para extrair os dados do país e exibi-los como nos designs.
+<!--
+## :soon: Implementação futura
 
-Você pode usar qualquer estrutura/biblioteca JavaScript no front-end, como [React](https://reactjs.org) ou [Vue](https://vuejs.org). Você também tem controle total sobre quais pacotes você usa para fazer coisas como fazer solicitações HTTP ou estilizar seu projeto.
+-   O que será implementado na próxima sprint?
+-->
 
-Seus usuários devem ser capazes de:
+## :wrench: Tecnologias utilizadas
 
--   Veja todos os países da API na página inicial
--   Pesquise um país usando um campo `input`
--   Filtrar países por região
--   Clique em um país para ver informações mais detalhadas em uma página separada
--   Clique nos países fronteiriços na página de detalhes
--   Alternar o esquema de cores entre o modo claro e escuro _(opcional)_
+-   Bibliotecas:
 
-Quer algum apoio no desafio? [Junte-se à nossa comunidade Slack](https://www.frontendmentor.io/slack) e faça perguntas no canal **#help**.
+    -   [React.js](https://react.dev/learn 'documentação do react.js')
+    -   [React Router Dom](https://reactrouter.com/en/main 'documentação do react router dom')
+    -   [React icons](https://react-icons.github.io/react-icons/ 'documentação do react icons')
 
-**⚠️ NOTE ⚠️: Às vezes, o REST Countries API pode ficar inativa. Adicionamos um arquivo `data.json` com todos os dados do país, caso você prefira usá-lo. No entanto, esteja ciente de que os dados no arquivo JSON podem não estar atualizados.**
+-   Outras:
 
-## Onde encontrar tudo
+    -   [Sass](https://sass-lang.com/documentation/ 'documentação do sass')
+    -   [vite](https://vitejs.dev/guide/ 'documentação do vite')
 
-Sua tarefa é construir o projeto para os designs dentro da pasta `/design`.
+## :gear: Rodando o projeto
 
-Neste desafio, você encontrará designs para dispositivos móveis e computadores em esquemas de cores no modo claro e escuro para ambas as páginas.
+Para rodar o repositório, é necessário clonar o mesmo e dar os seguintes comandos para iniciar o projeto:
 
-Os designs estão no formato estático JPG. Usar JPGs significa que você precisará usar seu melhor julgamento para estilos como `font-size`, `padding` e `margin`.
+```
+npm install
+```
 
-Não há recursos para este desafio, pois as bandeiras dos países serão extraídas da [REST Countries API] (https://restcountries.com) e você pode usar uma biblioteca de fontes de ícones para os ícones.
+```
+npm run dev
+```
 
-Há também um arquivo `style-guide.md` contendo as informações necessárias, como paleta de cores e fontes.
+## :paperclip: Extensões vs code
 
-## Construindo seu projeto
+Também se faz necessário da instalação das seguintes extensões para a organização do projeto:
 
-Sinta-se à vontade para usar qualquer fluxo de trabalho com o qual se sinta confortável. Abaixo está um processo sugerido, mas você não precisa seguir estas etapas:
+-   [EditorConfig for VS Code](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
+-   [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+-   [Todo Tree](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree)
+-   [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+-   [ES7+ React/Redux/React-Native snippets](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets)_(opcional)_
 
-1. Inicialize seu projeto como um repositório público no [GitHub](https://github.com/). A criação de um repositório facilitará o compartilhamento de seu código com a comunidade, caso você precise de ajuda. Se você não tiver certeza de como fazer isso, [leia este recurso Try Git](https://try.github.io/).
-2. Configure seu repositório para publicar seu código em um endereço da web. Isso também será útil se você precisar de ajuda durante um desafio, pois pode compartilhar a URL do seu projeto com a URL do repositório. Existem várias maneiras de fazer isso e fornecemos algumas recomendações abaixo.
-3. Examine os designs para começar a planejar como você abordará o projeto. Esta etapa é crucial para ajudá-lo a pensar no futuro para que as classes CSS criem estilos reutilizáveis.
-4. Antes de adicionar qualquer estilo, estruture seu conteúdo com HTML. Escrever seu HTML primeiro pode ajudar a focar sua atenção na criação de conteúdo bem estruturado.
-5. Escreva os estilos básicos para seu projeto, incluindo estilos de conteúdo gerais, como `font-family` e `font-size`.
-6. Comece adicionando estilos ao topo da página e trabalhe para baixo. Apenas passe para a próxima seção quando estiver satisfeito por ter concluído a área em que está trabalhando.
+## :building_construction: Estrutura de pastas [\*](https://github.com/joaobibiano/react-js-project-structure-lesson/blob/main/README.md)
 
-## Implantando seu projeto
+`assets`: Serve para armazenar imagens (imagens leves, se forem pesadas sempre prefira hospedar em uma CDN), ícones, etc.
 
-Como mencionado acima, existem muitas maneiras de hospedar seu projeto gratuitamente. Nossos anfitriões recomendados são:
+`components`: Componentes reutilizáveis da aplicação. Componentes que são unidades para sua aplicação, um button, um dropdown, um modal, etc.
 
--   [GitHub Pages](https://pages.github.com/)
--   [Vercel](https://vercel.com/)
--   [Netlify](https://www.netlify.com/)
+`hooks`: Essa pasta é utilizada para armazenar hooks que são genéricos, têm interação com hooks do React (useState, useEffect) e normalmente reutilizáveis e qualquer projeto, exemplos: useScreenSize, useLocalStorage, useSessionStorage, useUserActive.
+
+`layout`: Essa pasta é utilizada para os layouts.
+
+`pages`: As pages são as páginas que usam vários componentes. É essa a página que o usuário vai ver.
+
+`services`: Aqui ficam as configurações de HTTP clientes, normalmente utilizando axios.
+
+`store`: Ficam as definições de state managers, context api, zustand, redux.
+
+`utils`: Funções utilitárias como formatCurrency, formatPhone, convertTimezone, parsePhone (javascript puro).
+
+## :handshake: Colaboradores
+
+<!-- use o https://docs.github.com/rest/users/(seuNome) para encontrar a imagem do seu avatar no github -->
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/eriveltondasilva">
+        <img src="https://avatars.githubusercontent.com/u/108964822?v=4" width="100px;" alt="Foto de Erivelton Silva no GitHub"/><br>
+        <sub>
+          <b>Erivelton Silva</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="http://github.com/tatialveso">
+        <img src="https://avatars.githubusercontent.com/u/56259137?v=4" width="100px;" alt="Foto de Tati Alves no GitHub"/><br>
+        <sub>
+          <b>tatialveso</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="http://github.com/tatialveso">
+        <img src="https://avatars.githubusercontent.com/u/56259137?v=4" width="100px;" alt="Foto de Tati Alves no GitHub"/><br>
+        <sub>
+          <b>tatialveso</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="http://github.com/tatialveso">
+        <img src="https://avatars.githubusercontent.com/u/56259137?v=4" width="100px;" alt="Foto de Tati Alves no GitHub"/><br>
+        <sub>
+          <b>tatialveso</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
+
+## :dart: Status do projeto
+
+<br>
+
+## :rocket: O deploy do projeto
+
+<br>
