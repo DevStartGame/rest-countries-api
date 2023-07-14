@@ -114,10 +114,10 @@ Também se faz necessário da instalação das seguintes extensões para a organ
       </a>
     </td>
     <td align="center">
-      <a href="http://github.com/tatialveso">
-        <img src="https://avatars.githubusercontent.com/u/56259137?v=4" width="100px;" alt="Foto de Tati Alves no GitHub"/><br>
+      <a href="http://github.com/Edlavio">
+        <img src="https://github.com/Edlavio.png" width="100px;" alt="Foto de Pedro Alberto no GitHub"/><br>
         <sub>
-          <b>tatialveso</b>
+          <b>Pedro Alberto</b>
         </sub>
       </a>
     </td>
