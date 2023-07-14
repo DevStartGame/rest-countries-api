@@ -1,100 +1,133 @@
-# Frontend Mentor - REST Countries API with color theme switcher
+<h1 align="center">:file_cabinet: Projeto React.js 01</h1>
+<br>
+
+## :memo: Descrição
+
+Um aplicativo para fazer uma integração com o [REST Countries API](https://restcountries.com) para extrair os dados do país e exibi-los em tela.
+
+## :desktop_computer: Frontend Mentor - REST Countries API with color theme switcher
 
 ![Pré-visualização de design para a API de países REST com desafio de codificação do alternador de tema de cores](./design/desktop-preview.jpg)
 
-## Bem-vindo(a)! 👋
+## :books: Funcionalidades
 
-Obrigado por verificar este desafio de codificação de front-end.
+O usuários devem ser capazes de:
 
-[Frontend Mentor](https://www.frontendmentor.io) desafios ajudam você a melhorar suas habilidades de codificação criando projetos realistas.
+-   Funcionalidades principais:
 
-**Para fazer este desafio, você precisa de um bom conhecimento de HTML, CSS e JavaScript.**
+    -   Ver todos os países da API na página inicial.
+    -   Pesquisar um país usando um campo `input`.
+    -   Filtrar países por região.
+    -   Clicar em um país para ver informações mais detalhadas em uma página separada.
+    -   Clicar nos países de fronteira na página de detalhes.
+    -   Alternar o esquema de cores entre o modo claro e escuro.
 
-## The challenge
+-   Funcionalidades extras:
+    <br>
 
-Seu desafio é fazer a integração com o [REST Countries "API"](https://restcountries.com) para extrair os dados do país e exibi-los como nos designs.
+<!--
+## :soon: Implementação futura
 
-Você pode usar qualquer estrutura/biblioteca JavaScript no front-end, como [React](https://reactjs.org) ou [Vue](https://vuejs.org). Você também tem controle total sobre quais pacotes você usa para fazer coisas como fazer solicitações HTTP ou estilizar seu projeto.
+-   O que será implementado na próxima sprint?
+-->
 
-Seus usuários devem ser capazes de:
+## :wrench: Tecnologias utilizadas
 
-- Veja todos os países da API na página inicial
-- Pesquise um país usando um campo `input`
-- Filtrar países por região
-- Clique em um país para ver informações mais detalhadas em uma página separada
-- Clique nos países fronteiriços na página de detalhes
-- Alternar o esquema de cores entre o modo claro e escuro *(opcional)*
+-   Bibliotecas:
 
-Quer algum apoio no desafio? [Junte-se à nossa comunidade Slack](https://www.frontendmentor.io/slack) e faça perguntas no canal **#help**.
+    -   [React.js](https://react.dev/learn 'documentação do react.js')
+    -   [React Router Dom](https://reactrouter.com/en/main 'documentação do react router dom')
+    -   [React icons](https://react-icons.github.io/react-icons/ 'documentação do react icons')
 
-**⚠️ NOTE ⚠️: Às vezes, o REST Countries API pode ficar inativa. Adicionamos um arquivo `data.json` com todos os dados do país, caso você prefira usá-lo. No entanto, esteja ciente de que os dados no arquivo JSON podem não estar atualizados.**
+-   Outras:
 
-## Where to find everything
+    -   [Sass](https://sass-lang.com/documentation/ 'documentação do sass')
+    -   [vite](https://vitejs.dev/guide/ 'documentação do vite')
 
-Your task is to build out the project to the designs inside the `/design` folder. 
+## :gear: Rodando o projeto
 
-In this challenge, you will find mobile and desktop designs in light and dark mode color schemes for both pages.
+Para rodar o repositório, é necessário clonar o mesmo e dar os seguintes comandos para iniciar o projeto:
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
+```
+npm install
+```
 
-If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+```
+npm run dev
+```
 
-There are no assets for this challenge, as the country flags will be pulled from the [REST Countries API](https://restcountries.com) and you can use an icon font library for the icons.
+## :paperclip: Extensões vs code
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+Também se faz necessário da instalação das seguintes extensões para a organização do projeto:
 
-## Building your project
+-   [EditorConfig for VS Code](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
+-   [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+-   [Todo Tree](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree)
+-   [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+-   [ES7+ React/Redux/React-Native snippets](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets)_(opcional)_
 
-Sinta-se à vontade para usar qualquer fluxo de trabalho com o qual se sinta confortável. Abaixo está um processo sugerido, mas você não precisa seguir estas etapas:
+## :building_construction: Estrutura de pastas [\*](https://github.com/joaobibiano/react-js-project-structure-lesson/blob/main/README.md)
 
-1. Inicialize seu projeto como um repositório público no [GitHub](https://github.com/). A criação de um repositório facilitará o compartilhamento de seu código com a comunidade, caso você precise de ajuda. Se você não tiver certeza de como fazer isso, [leia este recurso Try Git](https://try.github.io/).
-2. Configure seu repositório para publicar seu código em um endereço da web. Isso também será útil se você precisar de ajuda durante um desafio, pois pode compartilhar a URL do seu projeto com a URL do repositório. Existem várias maneiras de fazer isso e fornecemos algumas recomendações abaixo.
-3. Examine os designs para começar a planejar como você abordará o projeto. Esta etapa é crucial para ajudá-lo a pensar no futuro para que as classes CSS criem estilos reutilizáveis.
-4. Antes de adicionar qualquer estilo, estruture seu conteúdo com HTML. Escrever seu HTML primeiro pode ajudar a focar sua atenção na criação de conteúdo bem estruturado.
-5. Escreva os estilos básicos para seu projeto, incluindo estilos de conteúdo gerais, como `font-family` e `font-size`.
-6. Comece adicionando estilos ao topo da página e trabalhe para baixo. Apenas passe para a próxima seção quando estiver satisfeito por ter concluído a área em que está trabalhando.
+`assets`: Serve para armazenar imagens (imagens leves, se forem pesadas sempre prefira hospedar em uma CDN), ícones, etc.
 
-## Deploying your project
+`components`: Componentes reutilizáveis da aplicação. Componentes que são unidades para sua aplicação, um button, um dropdown, um modal, etc.
 
-As mentioned above, there are many ways to host your project for free. Our recommend hosts are:
+`hooks`: Essa pasta é utilizada para armazenar hooks que são genéricos, têm interação com hooks do React (useState, useEffect) e normalmente reutilizáveis e qualquer projeto, exemplos: useScreenSize, useLocalStorage, useSessionStorage, useUserActive.
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+`layout`: Essa pasta é utilizada para os layouts.
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+`pages`: As pages são as páginas que usam vários componentes. É essa a página que o usuário vai ver.
 
-## Create a custom `README.md`
+`services`: Aqui ficam as configurações de HTTP clientes, normalmente utilizando axios.
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+`store`: Ficam as definições de state managers, context api, zustand, redux.
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+`utils`: Funções utilitárias como formatCurrency, formatPhone, convertTimezone, parsePhone (javascript puro).
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+## :handshake: Colaboradores
 
-## Submitting your solution
+<!-- use o https://docs.github.com/rest/users/(seuNome) para encontrar a imagem do seu avatar no github -->
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/eriveltondasilva">
+        <img src="https://avatars.githubusercontent.com/u/108964822?v=4" width="100px;" alt="Foto de Erivelton Silva no GitHub"/><br>
+        <sub>
+          <b>Erivelton Silva</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="http://github.com/tatialveso">
+        <img src="https://avatars.githubusercontent.com/u/56259137?v=4" width="100px;" alt="Foto de Tati Alves no GitHub"/><br>
+        <sub>
+          <b>tatialveso</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="http://github.com/tatialveso">
+        <img src="https://avatars.githubusercontent.com/u/56259137?v=4" width="100px;" alt="Foto de Tati Alves no GitHub"/><br>
+        <sub>
+          <b>tatialveso</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="http://github.com/tatialveso">
+        <img src="https://avatars.githubusercontent.com/u/56259137?v=4" width="100px;" alt="Foto de Tati Alves no GitHub"/><br>
+        <sub>
+          <b>tatialveso</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
+## :dart: Status do projeto
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
+<br>
 
-## Sharing your solution
+## :rocket: O deploy do projeto
 
-There are multiple places you can share your solution:
-
-1. Share your solution page in the **#finished-projects** channel of the [Slack community](https://www.frontendmentor.io/slack). 
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
-
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
-
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
-
-## Got feedback for us?
-
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
-
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
-
-**Have fun building!** 🚀
+<br>
