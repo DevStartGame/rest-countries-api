@@ -129,6 +129,14 @@ Também se faz necessário da instalação das seguintes extensões para a organ
         </sub>
       </a>
     </td>
+    <td align="center">
+      <a href="https://github.com/Manuel-AC-Ventura">
+        <img src="https://github.com/Manuel-AC-Ventura.png" width="100px;" alt="Foto de Pedro Alberto no GitHub"/><br>
+        <sub>
+          <b>Manuel Ventura</b>
+        </sub>
+      </a>
+    </td>
   </tr>
 </table>
 
