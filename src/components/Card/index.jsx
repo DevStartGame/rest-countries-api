@@ -2,7 +2,7 @@
 
 export default function Card (country){
     return(
-        <Link>
+        <Link to={`/country/${country.id}`}>
             <figure>
                 <img src={country.flag} alt=""/>
             </figure>
