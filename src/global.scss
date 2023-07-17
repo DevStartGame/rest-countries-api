@@ -1,0 +1,69 @@
+*::after,
+*::before,
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --blue-900: #111517;
+    --blue-800: #202c37;
+    --blue-700: #2b3945;
+
+    --gray-700: #858585;
+    --gray-300: #fafafa;
+    --gray-100: #ffffff;
+
+    /* Cores que serão utilizadas como fundo */
+    --elevation-1: var(--gray-300);
+    --elevation-2: var(--gray-100);
+
+    /* Cores que serão utilizadas nos textos */
+    --text-primary: var(--blue-900);
+    --text-secondary: var(--gray-700);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --elevation-1: var(--blue-800);
+        --elevation-2: var(--blue-700);
+
+        --text-primary: var(--gray-100);
+        --text-secondary: var(--gray-100);
+    }
+}
+
+html {
+    font-size: 16px;
+    font-family: "Nunito Sans", Arial, sans-serif;
+}
+
+input,
+textarea {
+    font-family: inherit;
+}
+
+img,
+video {
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+body {
+    background: var(--elevation-1);
+    color: var(--text-primary);
+}
+
+.container {
+    /*
+        Está classe vai deixar o elemento pai com
+        uma largura maxima de 1278px e centralizado impedindo
+        o alargamento em telas maiores. O '100% - 16px' apenas sera
+        usado em telas menores deixando margens de 16px para cada lado
+    */
+    width: min(100% - 16px, 1278px);
+    margin-inline: auto;
+    position: relative;
+}
