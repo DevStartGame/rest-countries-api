@@ -1,0 +1,34 @@
+body {
+    background-color: #fafafa;
+    font-family: sans-serif;
+    color: var(--text-primary, #111517);
+}
+
+.countries-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
+    gap: 5rem;
+    justify-content: center;
+
+    .country-card {
+        --cardBackground: #fff;
+
+        background-color: var(--cardBackground);
+        border-radius: .425rem;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, .25);
+        overflow: hidden;
+
+        figure {
+            background: var(--bgFlag) center center;
+            width: 100%;
+            margin: 0 0 .5rem 0;
+            height: 11rem;
+            background-size: cover;
+            border-bottom: thin solid #eee;
+        }
+
+        .card-body {
+            padding: 1rem;
+        }
+    }
+}
