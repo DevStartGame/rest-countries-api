@@ -11,10 +11,11 @@ const Regions = ['Africa', 'America', 'Asia', 'Europe', 'Oceania'];
 export const Home = () => {
     const [countries, setCountries] = useState([]);
     const dropdownRef = useRef(null);
-    const fetchCountries = async ({ name = null }) => {
-        const searchByName = name ? `name/${name}` : 'all';
-        const response = await fetch(`${URL}${searchByName}?fields=name,capital,population,region,flags`).then(
-            (response) => response.json()
+    const fetchCountries = async ({ name = null, region = null }) => {
+        let filterBy = name ? `name/${name}` : 'all';
+        filterBy = region ? `region/${region}` : filterBy;
+        const response = await fetch(`${URL}${filterBy}?fields=name,capital,population,region,flags`).then((response) =>
+            response.json()
         );
         setCountries(response);
     };
@@ -25,6 +26,11 @@ export const Home = () => {
 
     const handleSearch = async ({ target }) => {
         fetchCountries({ name: target?.value });
+    };
+
+    const handleFilterByRegion = (region) => {
+        fetchCountries({ region });
+        handleDropdown();
     };
 
     const handleDropdown = () => {
@@ -42,8 +48,11 @@ export const Home = () => {
                         Filter by Region <Icon icon="chevron" />
                     </div>
                     <div className="dropdown-wrapper">
+                        <a onClick={() => handleFilterByRegion(null)}>All Regions</a>
                         {Regions.map((region) => (
-                            <a key={region}>{region}</a>
+                            <a key={region} onClick={() => handleFilterByRegion(region)}>
+                                {region}
+                            </a>
                         ))}
                     </div>
                 </div>
