@@ -22,6 +22,8 @@
     /* Cores que serão utilizadas nos textos */
     --text-primary: var(--blue-900);
     --text-secondary: var(--gray-700);
+
+    --radius: 0.5rem;
 }
 
 @media (prefers-color-scheme: dark) {

@@ -1,8 +1,7 @@
 import { useEffect, useRef } from 'react';
 import './style.scss';
 import { useState } from 'react';
-import { CountryCard } from './CountryCard';
-import { Icon } from '../../components';
+import { CountryCard, Icon } from '../../components';
 
 const URL = 'https://restcountries.com/v3.1/';
 
