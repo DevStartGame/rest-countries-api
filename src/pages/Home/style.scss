@@ -67,7 +67,7 @@
             cursor: pointer;
         }
 
-        .icon {
+        svg {
             margin-left: 1.2rem;
             transform: rotateZ(180deg);
             transition: all .2s ease;
@@ -99,7 +99,7 @@
         }
 
         &.open {
-            .icon {
+            svg {
                 transform: rotateZ(0);
             }
 
@@ -108,15 +108,5 @@
                 padding: .75rem 0;
             }
         }
-    }
-}
-
-svg.icon {
-    --iconSize: 1.5rem;
-    height: var(--iconSize);
-    width: var(--iconSize);
-
-    &.secondary {
-        color: var(--text-secondary)
     }
 }

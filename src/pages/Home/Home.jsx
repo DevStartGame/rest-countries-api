@@ -1,54 +1,60 @@
-import { useEffect, useRef } from 'react';
-import './style.scss';
-import { useState } from 'react';
-import { CountryCard, Icon } from '../../components';
+import { useEffect, useRef } from 'react'
+import './style.scss'
+import { useState } from 'react'
+import { CountryCard } from '../../components'
+import { BiSearch } from 'react-icons/bi'
+import { LuChevronUp } from 'react-icons/lu'
 
-const URL = 'https://restcountries.com/v3.1/';
+const URL = 'https://restcountries.com/v3.1/'
 
-const Regions = ['Africa', 'America', 'Asia', 'Europe', 'Oceania'];
+const Regions = ['Africa', 'America', 'Asia', 'Europe', 'Oceania']
 
 export const Home = () => {
-    const [countries, setCountries] = useState([]);
-    const dropdownRef = useRef(null);
+    const [countries, setCountries] = useState([])
+    const dropdownRef = useRef(null)
     const fetchCountries = async ({ name = null, region = null }) => {
-        let filterBy = name ? `name/${name}` : 'all';
-        filterBy = region ? `region/${region}` : filterBy;
-        const response = await fetch(`${URL}${filterBy}?fields=name,capital,population,region,flags`).then((response) =>
-            response.json()
-        );
-        setCountries(response);
-    };
+        let filterBy = name ? `name/${name}` : 'all'
+        filterBy = region ? `region/${region}` : filterBy
+        const response = await fetch(
+            `${URL}${filterBy}?fields=name,capital,population,region,flags`
+        ).then(response => response.json())
+        setCountries(response)
+    }
 
     useEffect(() => {
-        fetchCountries({});
-    }, []);
+        fetchCountries({})
+    }, [])
 
     const handleSearch = async ({ target }) => {
-        fetchCountries({ name: target?.value });
-    };
+        fetchCountries({ name: target?.value })
+    }
 
-    const handleFilterByRegion = (region) => {
-        fetchCountries({ region });
-        handleDropdown();
-    };
+    const handleFilterByRegion = region => {
+        fetchCountries({ region })
+        handleDropdown()
+    }
 
     const handleDropdown = () => {
-        dropdownRef.current.classList.toggle('open');
-    };
+        dropdownRef.current.classList.toggle('open')
+    }
     return (
         <div className="container">
             <div className="row">
                 <div className="form-group search">
-                    <Icon icon="search" className="secondary" />
-                    <input type="search" placeholder="Search for a country..." onInput={handleSearch} />
+                    <BiSearch />
+                    <input
+                        type="search"
+                        placeholder="Search for a country..."
+                        onInput={handleSearch}
+                    />
                 </div>
                 <div className="form-group dropdown" ref={dropdownRef}>
                     <div onClick={handleDropdown}>
-                        Filter by Region <Icon icon="chevron" />
+                        Filter by Region <LuChevronUp />
                     </div>
                     <div className="dropdown-wrapper">
                         <a onClick={() => handleFilterByRegion(null)}>All Regions</a>
-                        {Regions.map((region) => (
+                        {Regions.map(region => (
                             <a key={region} onClick={() => handleFilterByRegion(region)}>
                                 {region}
                             </a>
@@ -59,12 +65,18 @@ export const Home = () => {
             <div className="countries-grid">
                 {countries?.length &&
                     countries.map(
-                        ({ name: { common: name }, flags: { svg: flag }, capital: [capital], region, population }) => {
-                            const props = { flag, name, capital, region, population };
-                            return <CountryCard {...props} key={name} />;
+                        ({
+                            name: { common: name },
+                            flags: { svg: flag },
+                            capital: [capital],
+                            region,
+                            population
+                        }) => {
+                            const props = { flag, name, capital, region, population }
+                            return <CountryCard {...props} key={name} />
                         }
                     )}
             </div>
         </div>
-    );
-};
+    )
+}
