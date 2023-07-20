@@ -10,7 +10,7 @@ export default function App() {
             <Routes>
                 <Route path="/" element={<GlobalLayout />}>
                     <Route index element={<Countries />} />
-                    <Route path="Countries/:id" element={<Country />} />
+                    <Route path="countries/:id" element={<Country />} />
                     <Route path="*" element={<ErrorPage />} />
                 </Route>
             </Routes>
