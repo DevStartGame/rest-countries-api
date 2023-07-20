@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import './style.scss'
+import styles from './styles.module.scss'
 import { useState } from 'react'
 import { CountryCard } from '../../components'
 import { BiSearch } from 'react-icons/bi'
@@ -35,12 +35,12 @@ export const Home = () => {
     }
 
     const handleDropdown = () => {
-        dropdownRef.current.classList.toggle('open')
+        dropdownRef.current.classList.toggle(styles.open)
     }
     return (
-        <div className="container">
-            <div className="row">
-                <div className="form-group search">
+        <div className={styles.container}>
+            <div className={styles.row}>
+                <div className={`${styles['form-group']} ${styles.search}`}>
                     <BiSearch />
                     <input
                         type="search"
@@ -48,11 +48,11 @@ export const Home = () => {
                         onInput={handleSearch}
                     />
                 </div>
-                <div className="form-group dropdown" ref={dropdownRef}>
+                <div className={`${styles['form-group']} ${styles.dropdown}`} ref={dropdownRef}>
                     <div onClick={handleDropdown}>
                         Filter by Region <LuChevronUp />
                     </div>
-                    <div className="dropdown-wrapper">
+                    <div className={styles['dropdown-wrapper']}>
                         <a onClick={() => handleFilterByRegion(null)}>All Regions</a>
                         {Regions.map(region => (
                             <a key={region} onClick={() => handleFilterByRegion(region)}>
@@ -62,7 +62,7 @@ export const Home = () => {
                     </div>
                 </div>
             </div>
-            <div className="countries-grid">
+            <div className={styles['countries-grid']}>
                 {countries?.length &&
                     countries.map(
                         ({

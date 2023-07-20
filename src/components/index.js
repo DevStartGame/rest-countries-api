@@ -1,2 +1,1 @@
-export { Icon } from './Icons';
-export { CountryCard } from './CountryCard';
+export { CountryCard } from './CountryCard'
