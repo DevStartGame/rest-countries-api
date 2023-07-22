@@ -137,25 +137,35 @@ Também se faz necessário da instalação das seguintes extensões para a organ
         </sub>
       </a>
     </td>
+    <td align="center">
+      <a href="https://github.com/fxdias">
+        <img src="https://github.com/fxdias.png" width="100px;" alt="Foto de Fernando Ximenes no GitHub"/><br>
+        <sub>
+          <b>Fernando Ximenes</b>
+        </sub>
+      </a>
+    </td>
   </tr>
 </table>
 
 ## 👨🏽‍💻 Git Flow
 
 ### Branches
-- main -» branch em produção
-- dev -» branch para desenvolvimento
+
+-   main -» branch em produção
+-   dev -» branch para desenvolvimento
 
 Branches locais devem seguir o padrao: <iniciais do colaborador/identificador da task/titulo da task> ex: WA/TASK-130/Página_de_Detalhes
 
 ### Pull Requests
+
 Cada alteração deve ser feita a partir de PR's. <br>
-Devs devem fazer o checkout da branch `dev` e criar uma PR para a mesma <small>(branch dev)</small>. <br> 
+Devs devem fazer o checkout da branch `dev` e criar uma PR para a mesma <small>(branch dev)</small>. <br>
 Após a PR ser aprovada, o criador da PR deverá fazer o merge (squash and merge) e deletar a sua branch.
 
 ### Commits
-Ficou convencionado que não seguiremos padrão, apenas que os commits devem ser em português.
 
+Ficou convencionado que não seguiremos padrão, apenas que os commits devem ser em português.
 
 <br>
 
