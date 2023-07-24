@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom'
 
-export default function Country() {
+export default function Details() {
     const { id } = useParams()
 
     return (
