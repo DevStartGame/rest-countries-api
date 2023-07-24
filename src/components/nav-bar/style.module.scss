@@ -1,0 +1,39 @@
+.navBar {
+    background: var(--elevation-2);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.07);
+
+    .content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5rem 0;
+
+        .title {
+            --step-0: clamp(1.25rem, calc(1.15rem + 0.44vw), 1.5rem);
+            /* Tamanho fluido: 24.00px → 20.00px */
+            /* Gerado atraves de utopia
+
+                Obs: está variavel apenas será usada neste componente
+                      e para o outro resto usaremos as medidas em rem
+                      fornecidas pelo Figma
+             */
+            /* @link https://utopia.fyi/type/calculator?c=375,20,1.2,1278,24,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+            font-size: var(--step-0);
+            font-weight: 800;
+            line-height: 130%;
+        }
+
+        .toggleThemeButton {
+            gap: 0.625rem;
+            display: flex;
+            align-items: center;
+
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: inherit;
+            text-transform: capitalize;
+        }
+    }
+}
