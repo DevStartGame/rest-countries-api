@@ -1,9 +1,9 @@
 import { useEffect, useRef } from 'react'
 import styles from './styles.module.scss'
 import { useState } from 'react'
-import { BiSearch } from 'react-icons/bi'
 import { LuChevronUp } from 'react-icons/lu'
 import { CountryCard } from '../../components/CountryCard'
+import { SearchBar } from '../../components/SearchBar'
 
 const URL = 'https://restcountries.com/v3.1/'
 
@@ -25,10 +25,6 @@ export default function Home() {
         fetchCountries({})
     }, [])
 
-    const handleSearch = async ({ target }) => {
-        fetchCountries({ name: target?.value })
-    }
-
     const handleFilterByRegion = region => {
         fetchCountries({ region })
         handleDropdown()
@@ -40,14 +36,7 @@ export default function Home() {
     return (
         <div className={`container`}>
             <div className={styles.row}>
-                <div className={`${styles['form-group']} ${styles.search}`}>
-                    <BiSearch />
-                    <input
-                        type="search"
-                        placeholder="Search for a country..."
-                        onInput={handleSearch}
-                    />
-                </div>
+                <SearchBar />
                 <div className={`${styles['form-group']} ${styles.dropdown}`} ref={dropdownRef}>
                     <div onClick={handleDropdown}>
                         Filter by Region <LuChevronUp />

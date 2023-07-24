@@ -1,0 +1,26 @@
+.form-group {
+    margin: 1rem 0;
+    position: relative;
+    display: flex;
+    padding: 1rem 1.5rem;
+    align-items: center;
+    border-radius: var(--radius);
+    background: var(--elevation-2);
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.07), 0px 3px 4px 0px rgba(0, 0, 0, 0.07);
+
+    &.search {
+        input {
+            border: none;
+            outline: none;
+
+            &::placeholder {
+                color: var(--text-secondary);
+            }
+
+            background-color: var(--elevation-2);
+            color: var(--text-primary);
+
+            margin-left: 0.475rem;
+        }
+    }
+}
