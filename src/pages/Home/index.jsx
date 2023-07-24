@@ -38,7 +38,7 @@ export const Home = () => {
         dropdownRef.current.classList.toggle(styles.open)
     }
     return (
-        <div className={styles.container}>
+        <div className={`container`}>
             <div className={styles.row}>
                 <div className={`${styles['form-group']} ${styles.search}`}>
                     <BiSearch />
