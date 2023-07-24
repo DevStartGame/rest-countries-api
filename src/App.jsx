@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import GlobalLayout from './layouts/GlobalLayout'
-import { Home } from './pages/Home/'
+import Home from './pages/Home/'
 import Details from './pages/Details'
 import Error from './pages/Error'
 

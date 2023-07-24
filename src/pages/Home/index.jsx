@@ -9,7 +9,7 @@ const URL = 'https://restcountries.com/v3.1/'
 
 const Regions = ['Africa', 'America', 'Asia', 'Europe', 'Oceania']
 
-export const Home = () => {
+export default function Home() {
     const [countries, setCountries] = useState([])
     const dropdownRef = useRef(null)
     const fetchCountries = async ({ name = null, region = null }) => {
