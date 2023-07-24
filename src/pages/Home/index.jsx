@@ -1,9 +1,9 @@
 import { useEffect, useRef } from 'react'
 import styles from './styles.module.scss'
 import { useState } from 'react'
-import { CountryCard } from '../../components'
 import { BiSearch } from 'react-icons/bi'
 import { LuChevronUp } from 'react-icons/lu'
+import { CountryCard } from '../../components/CountryCard'
 
 const URL = 'https://restcountries.com/v3.1/'
 
