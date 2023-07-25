@@ -1,4 +1,5 @@
 import styles from './styles.module.scss'
+import { Link } from 'react-router-dom'
 
 const Info = ({ label, value }) => (
     <p>
@@ -9,6 +10,7 @@ const Info = ({ label, value }) => (
 export const CountryCard = ({ name, flag, region, population, capital }) => {
     return (
         <div className={styles['country-card']}>
+            <Link to={`/country-details/${name}`}>
             <figure style={{ '--bgFlag': `url("${flag}")` }}></figure>
             <div className={styles['card-body']}>
                 <h3>{name}</h3>
@@ -16,6 +18,7 @@ export const CountryCard = ({ name, flag, region, population, capital }) => {
                 <Info label="Region" value={region} />
                 <Info label="Capital" value={capital} />
             </div>
+            </Link>
         </div>
     )
 }
