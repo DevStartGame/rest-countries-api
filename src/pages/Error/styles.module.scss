@@ -1,0 +1,41 @@
+.errorPage {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4rem;
+    background-color: var(--elevation-1);
+}
+
+.errorPage__text {
+    color: var(--text-error);
+    text-transform: uppercase;
+    font-size: 2rem;
+    letter-spacing: 0.5rem;
+
+    @media screen and (max-width: 576px) {
+        font-size: 1.5rem;
+        letter-spacing: 0.25rem;
+    }
+}
+
+.errorPage__button {
+    padding: 0.75rem 2rem;
+    margin-top: 1rem;
+    background-color: var(--elevation-errorButton);
+    color: var(--text-errorButton);
+    text-decoration: none;
+    text-align: center;
+    border-radius: 0.5rem;
+
+    &:hover {
+        background-color: var(--blue-700);
+    }
+
+    @media screen and (max-width: 576px) {
+        font-size: 0.8rem;
+        padding: 0.5rem 1rem;
+    }
+}
