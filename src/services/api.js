@@ -1,6 +1,10 @@
 import axios from 'axios'
 
+/*
+ * @param setCountries - hook(useState) que conterá todos os dados dos países
+ */
 export async function getCountries(setCountries) {
+    // TODO: colocar toda a lógica nesta função
     const URL = 'https://restcountries.com/v3.1/all'
     const data = await getData(URL)
 
@@ -16,7 +20,7 @@ function getData(URL) {
     return data
 }
 
-// TODO: 
+// TODO: realocar lógica na função getCountries
 // const URL = 'https://restcountries.com/v3.1/'
 
 // const fetchCountries = async ({ name = null, region = null }) => {
