@@ -72,7 +72,7 @@ export default function Details() {
                                     <li className={styles['border-item']} key={item}>{item}</li>
                                 ))
                             ) : (
-                                <li>None Borders</li>
+                                <li className={styles['border-item']}>No Borders</li>
                             )}
                         </ul>
                     </div>
