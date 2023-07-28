@@ -25,15 +25,13 @@
     --radius: 0.5rem;
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --elevation-1: var(--blue-800);
-        --elevation-2: var(--blue-700);
+[data-dark-theme] {
+    --elevation-1: var(--blue-800);
+    --elevation-2: var(--blue-700);
 
-        --text-primary: var(--gray-100);
-        --text-secondary: var(--gray-100);
-        --text-error: var(--blue-100);
-    }
+    --text-primary: var(--gray-100);
+    --text-secondary: var(--gray-100);
+    --text-error: var(--blue-100);
 }
 
 // --------------------------------------------
@@ -72,6 +70,10 @@ video {
     max-width: 100%;
     display: block;
     object-fit: cover;
+}
+
+* {
+    transition: background-color .6s ease;
 }
 
 body {
