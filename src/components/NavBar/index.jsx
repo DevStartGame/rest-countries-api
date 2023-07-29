@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 const Body = document.querySelector('body')
 
-export function NavBar() {
+export default function NavBar() {
     const [isDarkMode, setIsDarkMode] = useState(Body.hasAttribute('data-dark-theme'))
 
     const toggleTheme = () => {

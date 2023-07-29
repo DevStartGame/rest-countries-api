@@ -6,7 +6,7 @@ const Info = ({ label, value }) => (
     </p>
 )
 
-export const CountryCard = ({ name, flag, region, population, capital }) => {
+export default function CountryCard({ name, flag, region, population, capital }) {
     return (
         <div className={styles['country-card']}>
             <figure style={{ '--bgFlag': `url("${flag}")` }}></figure>

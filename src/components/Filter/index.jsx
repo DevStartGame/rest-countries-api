@@ -4,7 +4,7 @@ import { LuChevronUp } from 'react-icons/lu'
 
 const Regions = ['Africa', 'America', 'Asia', 'Europe', 'Oceania']
 
-export function Filter() {
+export default function Filter() {
     const dropdownRef = useRef(null)
 
     const handleDropdown = () => {
