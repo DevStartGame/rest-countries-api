@@ -1,7 +1,7 @@
 import { BiSearch } from 'react-icons/bi'
 import styles from './styles.module.scss'
 
-export function SearchBar() {
+export default function SearchBar() {
     // eslint-disable-next-line no-unused-vars
     const handleSearch = async ({ target }) => {
         // fetchCountries({ name: target?.value })
