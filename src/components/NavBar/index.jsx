@@ -18,7 +18,7 @@ export default function NavBar() {
     return (
         <div className={styles.navBar}>
             <nav className={`container ${styles.content}`}>
-                <Link href="/">
+                <Link to="/">
                     <h1 className={styles.title}>Where in the world?</h1>
                 </Link>
                 <button onClick={toggleTheme} className={styles.toggleThemeButton} type="button">
