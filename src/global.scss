@@ -1,12 +1,7 @@
-*::after,
-*::before,
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 :root {
+    // -> Variáveis
+
+    // Cores
     --blue-900: #111517;
     --blue-800: #202c37;
     --blue-700: #2b3945;
@@ -15,30 +10,54 @@
     --gray-300: #fafafa;
     --gray-100: #ffffff;
 
-    /* Cores que serão utilizadas como fundo */
+    // Cores que serão utilizadas como fundo
     --elevation-1: var(--gray-300);
     --elevation-2: var(--gray-100);
+    --elevation-errorButton: var(--gray-700);
 
-    /* Cores que serão utilizadas nos textos */
+    // Cores que serão utilizadas nos textos
     --text-primary: var(--blue-900);
     --text-secondary: var(--gray-700);
+    --text-error: var(--blue-700);
+    --text-errorButton: var(--gray-100);
 
+    // Outras variáveis
     --radius: 0.5rem;
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --elevation-1: var(--blue-800);
-        --elevation-2: var(--blue-700);
+[data-dark-theme] {
+    --elevation-1: var(--blue-800);
+    --elevation-2: var(--blue-700);
 
-        --text-primary: var(--gray-100);
-        --text-secondary: var(--gray-100);
-    }
+    --text-primary: var(--gray-100);
+    --text-secondary: var(--gray-100);
+    --text-error: var(--blue-100);
+}
+
+// --------------------------------------------
+
+// ->Funções SASS
+
+@function darker($color, $percent: 80) {
+    @return mix(black, $color, $percent);
+}
+
+@function lighter($color, $percent: 80) {
+    @return mix(white, $color, $percent);
+}
+
+// ---------------------------------------------
+
+*::after,
+*::before,
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html {
-    font-size: 16px;
-    font-family: "Nunito Sans", Arial, sans-serif;
+    font: 16px 'Nunito Sans', Arial, sans-serif;
 }
 
 input,
@@ -51,6 +70,10 @@ video {
     max-width: 100%;
     display: block;
     object-fit: cover;
+}
+
+* {
+    transition: background-color .6s ease;
 }
 
 body {
