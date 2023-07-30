@@ -6,7 +6,8 @@ import { getCountry } from '@services/api'
 
 export default function Details() {
     const [country, setCountry] = useState()
-    const { name } = useParams()
+    const { slug } = useParams()
+    const name = slug.replace(/-/g, ' ')
     const navigate = useNavigate()
 
     const handleGoBack = () => {
