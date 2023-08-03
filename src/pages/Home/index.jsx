@@ -28,11 +28,11 @@ export default function Home() {
                         ({
                             name: { common: name },
                             flags: { svg: flag },
-                            // capital: [capital],
+                            capital: capital,
                             region,
                             population
                         }) => {
-                            const props = { flag, name, /*  capital, */ region, population }
+                            const props = { flag, name, capital, region, population }
                             return <CountryCard {...props} key={name} />
                         }
                     )}
