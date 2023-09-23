@@ -2,9 +2,9 @@ import styles from './styles.module.scss'
 import { useState, useEffect } from 'react'
 
 // components
-import SearchBar from '@components/SearchBar'
-import Filter from '@components/Filter'
-import CountryCard from '@components/CountryCard'
+import SearchBar from '@/components/SearchBar'
+import Filter from '@/components/Filter'
+import CountryCard from '@/components/CountryCard'
 
 import { getCountries } from '@services/api'
 

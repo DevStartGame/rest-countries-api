@@ -36,18 +36,6 @@
 
 // --------------------------------------------
 
-// ->Funções SASS
-
-@function darker($color, $percent: 80) {
-    @return mix(black, $color, $percent);
-}
-
-@function lighter($color, $percent: 80) {
-    @return mix(white, $color, $percent);
-}
-
-// ---------------------------------------------
-
 *::after,
 *::before,
 * {

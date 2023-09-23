@@ -1,9 +1,9 @@
 import styles from './styles.module.scss'
 import { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
-import { ArrowLeft } from '@components/Icons'
-import Loading from '@components/Loading'
-import { getCountry } from '@services/api'
+import { ArrowLeft } from '@/components/Icons'
+import Loading from '@/components/Loading'
+import { getCountry } from '@/services/api'
 
 export default function Details() {
     const [country, setCountry] = useState(null)
