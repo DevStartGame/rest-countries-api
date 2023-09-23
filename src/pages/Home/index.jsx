@@ -17,11 +17,11 @@ export default function Home() {
                 <SearchBar />
                 <Filter onSelectRegion={region => setFilterByRegion(region)} />
             </div>
-            {data &&
-                data.map(country => <div key={country.name.common}>{country.name.common}</div>)}
-            {/* <div className={styles['countries-grid']}>
+
+            <div className={styles['countries-grid']}>
                 {filterByRegion === ''
-                    ? data.map(
+                    ? data &&
+                      data.map(
                           ({
                               name: { common: name },
                               flags: { svg: flag },
@@ -47,7 +47,7 @@ export default function Home() {
                                   return <CountryCard {...props} key={name} />
                               }
                           )}
-            </div> */}
+            </div>
         </div>
     )
 }
