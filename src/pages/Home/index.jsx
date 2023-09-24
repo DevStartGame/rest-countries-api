@@ -1,15 +1,16 @@
 import styles from './styles.module.scss'
 import { useState } from 'react'
+import useGetApiData from '@/hooks/useGetApiData'
 
 // components
 import SearchBar from '@/components/SearchBar'
 import Filter from '@/components/Filter'
 import CountryCard from '@/components/CountryCard'
-import useGetApiData from '@/hooks/useGetApiData'
-//
+
 export default function Home() {
     const [filterByRegion, setFilterByRegion] = useState('')
-    const { data, error, isLoading } = useGetApiData()
+    const URL = 'https://restcountries.com/v3.1/all'
+    const { data } = useGetApiData(URL)
 
     return (
         <div className={`container`}>
