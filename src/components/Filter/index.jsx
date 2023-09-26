@@ -4,7 +4,7 @@ import { LuChevronUp } from 'react-icons/lu'
 
 const Regions = ['Africa', 'Americas', 'Asia', 'Europe', 'Oceania']
 
-export default function Filter({onSelectRegion}) {
+export default function Filter({ filter, onSelectRegion }) {
     const dropdownRef = useRef(null)
 
     const handleDropdown = () => {
@@ -25,7 +25,10 @@ export default function Filter({onSelectRegion}) {
             <div className={styles['dropdown-wrapper']}>
                 <a onClick={() => handleFilterByRegion('')}>All Regions</a>
                 {Regions.map(region => (
-                    <a key={region} onClick={() => handleFilterByRegion(region)}>
+                    <a
+                        className={region === filter && `${styles['is-selected']}`}
+                        key={region}
+                        onClick={() => handleFilterByRegion(region)}>
                         {region}
                     </a>
                 ))}
