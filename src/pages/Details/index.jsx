@@ -9,15 +9,12 @@ import useGetApiData from '@/hooks/useGetApiData'
 export default function Details() {
     const { slug } = useParams()
     const navigate = useNavigate()
-    const name = slug.replace(/-/g, ' ')
-    const URL = `https://restcountries.com/v3.1/name/${name}`
+    const URL = `https://restcountries.com/v3.1/alpha/${slug}`
     const { data, error, isLoading } = useGetApiData(URL)
 
     const handleGoBack = () => {
         navigate(-1)
     }
-
-    console.log(data)
 
     return (
         <div className={`container ${styles.details}`}>
@@ -40,7 +37,7 @@ export default function Details() {
                             <div className={styles['info-left']}>
                                 <dl>
                                     <dt>Native name:</dt>
-                                    <dd>{data[0].name.official}</dd>
+                                    <dd>{data[0].name.common}</dd>
                                     <dt>Population:</dt>
                                     <dd>{data[0].population}</dd>
                                     <dt>Region:</dt>
@@ -71,17 +68,16 @@ export default function Details() {
                         </div>
                         <div className={styles.border}>
                             <span>Border Countries:</span>
-                            <ul>
+                            {/* <ul>
                                 {data[0].borders ? (
                                     data[0].borders.map(item => (
                                         <li className={styles['border-item']} key={item}>
-                                            {item}
-                                        </li>
-                                    ))
+
+                                                               {item}
                                 ) : (
                                     <li className={styles['border-item']}>No Borders</li>
                                 )}
-                            </ul>
+                            </ul> */}
                         </div>
                     </div>
                 </main>

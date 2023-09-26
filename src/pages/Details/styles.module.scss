@@ -91,6 +91,12 @@ dd::after {
             .img-wrapper {
                 margin: 0 auto;
             }
+
+            .info-wrapper {
+                .info {
+                    flex-direction: column;
+                }
+            }
         }
     }
 }

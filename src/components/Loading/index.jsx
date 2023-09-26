@@ -1,15 +1,9 @@
+import styles from './styles.module.scss'
 import ReactLoading from 'react-loading'
 
 export default function Loading() {
-    const LoadingStyle = {
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        height: '50vh'
-    }
-
     return (
-        <div style={LoadingStyle}>
+        <div className={styles.loading}>
             <ReactLoading type={'spinningBubbles'} color={'#ffffff'} />
         </div>
     )
