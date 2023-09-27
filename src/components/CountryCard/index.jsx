@@ -6,7 +6,6 @@ function Root({ children }) {
 }
 
 function Card({ slug, children }) {
-    // const slug = name.replace(/\s+/g, '-')
     return (
         <section className={styles['country-card']}>
             <Link to={`/country-details/${slug}`}>{children}</Link>

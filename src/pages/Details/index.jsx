@@ -65,7 +65,7 @@ export default function Details() {
                             <div className={styles['info-left']}>
                                 <dl>
                                     <dt>Top Level Domain:</dt>
-                                    <dd>{country.tld.join(', ')}</dd>
+                                    <dd>{country.tld.join(' - ')}</dd>
 
                                     <dt>Currencies:</dt>
                                     <dd>
