@@ -1,5 +1,6 @@
 import styles from './styles.module.scss'
 import { useParams, useNavigate, Navigate } from 'react-router-dom'
+import PageTitleUtils from '@/utils/PageTitleUtils'
 
 // #Componentes
 import { ArrowLeft } from '@/components/Icons'
@@ -11,6 +12,8 @@ export default function Details() {
     const navigate = useNavigate()
     const URL = `https://restcountries.com/v3.1/alpha/${slug}`
     const { data, error, isLoading } = useGetApiData(URL)
+
+    PageTitleUtils('Página de Detalhes')
 
     const handleGoBack = () => {
         navigate(-1)

@@ -8,7 +8,7 @@ export default function App() {
     return (
         <Router>
             <Routes>
-                <Route path="/" element={<GlobalLayout />} errorElement={<Error />}>
+                <Route path="/" element={<GlobalLayout />}>
                     <Route index element={<Home />} />
                     <Route path="country-details/:slug" element={<Details />} />
                     <Route path="error" element={<Error />} />
