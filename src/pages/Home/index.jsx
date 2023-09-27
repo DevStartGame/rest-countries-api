@@ -4,7 +4,7 @@ import { Navigate } from 'react-router-dom'
 import useGetApiData from '@/hooks/useGetApiData'
 import PageTitleUtils from '@/utils/PageTitleUtils'
 
-// components
+// #Componentes
 import SearchBar from '@/components/SearchBar'
 import Filter from '@/components/Filter'
 import Loading from '@/components/Loading'
@@ -24,23 +24,17 @@ export default function Home() {
     }
 
     useEffect(() => {
-        function filter() {
-            let filtered = data
+        if (!data) return
 
-            if (filterByRegion) {
-                filtered = filtered.filter(country => country.region === filterByRegion)
-            }
+        const filteredCountries = data.filter(country => {
+            const regionMatches = !filterByRegion || country.region === filterByRegion
+            const textMatches =
+                !filterByText ||
+                country.name.common.toLowerCase().startsWith(filterByText.toLowerCase())
+            return regionMatches && textMatches
+        })
 
-            if (filterByText) {
-                const searchText = filterByText.toLowerCase()
-                filtered = filtered.filter(country =>
-                    country.name.common.toLowerCase().startsWith(searchText)
-                )
-            }
-
-            setCountries(filtered)
-        }
-        filter()
+        setCountries(filteredCountries)
     }, [filterByRegion, filterByText, data])
 
     return (
@@ -54,13 +48,16 @@ export default function Home() {
             </div>
 
             {error && <Navigate to="/error" />}
-            {!countries && <Loading />}
+            {countries.length === 0 && !error && <Loading />}
 
-            {countries && (
+            {countries.length > 0 && (
                 <CountryCard.Root>
                     {countries.map(country => (
                         <CountryCard.Card key={country.cca3} slug={country.cca3}>
-                            <CountryCard.Img flag={country.flags.svg} alt={country.flags.alt} />
+                            <CountryCard.Img
+                                flag={country.flags.svg}
+                                alt={country.flags.alt ?? country.name.common}
+                            />
                             <CountryCard.Body>
                                 <CountryCard.Title name={country.name.common} />
                                 <CountryCard.Info label="Population" value={country.population} />
