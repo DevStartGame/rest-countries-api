@@ -26,7 +26,7 @@ export default function Filter({ filter, onSelectRegion }) {
                 <a onClick={() => handleFilterByRegion('')}>All Regions</a>
                 {Regions.map(region => (
                     <a
-                        className={region === filter && `${styles['is-selected']}`}
+                        className={region === filter ? styles['is-selected'] : ''}
                         key={region}
                         onClick={() => handleFilterByRegion(region)}>
                         {region}

@@ -28,9 +28,9 @@ export default function Details() {
             </button>
 
             {error && <Navigate to="/error" />}
-            {country.length === 0 && !error && <Loading />}
+            {!country && !error && <Loading />}
 
-            {country.length > 0 && (
+            {country && (
                 <main className={styles['country-details']}>
                     <div className={styles['img-wrapper']}>
                         <img
