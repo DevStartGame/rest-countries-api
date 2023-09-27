@@ -1,17 +1,18 @@
 import styles from './styles.module.scss'
-import { useParams, useNavigate, Navigate } from 'react-router-dom'
+import { useParams, useNavigate, Navigate, Link } from 'react-router-dom'
 import PageTitleUtils from '@/utils/PageTitleUtils'
+import useGetApiData from '@/hooks/useGetApiData'
 
 // #Componentes
 import { ArrowLeft } from '@/components/Icons'
 import Loading from '@/components/Loading'
-import useGetApiData from '@/hooks/useGetApiData'
 
 export default function Details() {
     const { slug } = useParams()
     const navigate = useNavigate()
     const URL = `https://restcountries.com/v3.1/alpha/${slug}`
-    const { data, error, isLoading } = useGetApiData(URL)
+    const { data, error } = useGetApiData(URL)
+    const country = data && data[0]
 
     PageTitleUtils('Página de Detalhes')
 
@@ -27,60 +28,69 @@ export default function Details() {
             </button>
 
             {error && <Navigate to="/error" />}
-            {isLoading && <Loading />}
-            {data && (
+            {!country && <Loading />}
+
+            {country && (
                 <main className={styles['country-details']}>
                     <div className={styles['img-wrapper']}>
-                        <img src={data[0].flags.svg} alt="country flag" />
+                        <img
+                            src={country.flags.svg}
+                            alt={country.flags.alt ?? country.name.official}
+                        />
                     </div>
 
                     <div className={styles['info-wrapper']}>
-                        <h1 className={styles.title}>{data[0].name.official}</h1>
+                        <h1 className={styles.title}>{country.name.official}</h1>
+
                         <div className={styles.info}>
                             <div className={styles['info-left']}>
                                 <dl>
                                     <dt>Native name:</dt>
-                                    <dd>{data[0].name.common}</dd>
+                                    <dd>{Object.values(country.name.nativeName)[0].common}.</dd>
+
                                     <dt>Population:</dt>
-                                    <dd>{data[0].population}</dd>
+                                    <dd>{country.population.toLocaleString()}</dd>
+
                                     <dt>Region:</dt>
-                                    <dd>{data[0].region}</dd>
+                                    <dd>{country.region}.</dd>
+
                                     <dt>Sub region:</dt>
-                                    <dd>{data[0].subregion}</dd>
+                                    <dd>{country.subregion}.</dd>
+
                                     <dt>Capital:</dt>
-                                    <dd>{data[0].capital[0]}</dd>
+                                    <dd>{country.capital.join(', ')}.</dd>
                                 </dl>
                             </div>
 
                             <div className={styles['info-left']}>
                                 <dl>
                                     <dt>Top Level Domain:</dt>
-                                    <dd>{data[0].tld[0]}</dd>
+                                    <dd>{country.tld.join(', ')}</dd>
+
                                     <dt>Currencies:</dt>
                                     <dd>
-                                        {Object.values(data[0].currencies).map(item => item.name)}
+                                        {Object.values(country.currencies).map(item => item.name)}
                                     </dd>
+
                                     <dt>Languages:</dt>
-                                    <dd>
-                                        {Object.values(data[0].languages)
-                                            .map(item => item)
-                                            .join(' - ')}
-                                    </dd>
+                                    <dd>{Object.values(country.languages).join(', ')}.</dd>
                                 </dl>
                             </div>
                         </div>
+
                         <div className={styles.border}>
                             <span>Border Countries:</span>
-                            {/* <ul>
-                                {data[0].borders ? (
-                                    data[0].borders.map(item => (
+                            <ul className={styles['border-items']}>
+                                {country.borders &&
+                                    country.borders.map(item => (
                                         <li className={styles['border-item']} key={item}>
-
-                                                               {item}
-                                ) : (
+                                            <Link to={`/country-details/${item}`}>{item}</Link>
+                                        </li>
+                                    ))}
+                                {!country.borders && (
                                     <li className={styles['border-item']}>No Borders</li>
-                                )}
-                            </ul> */}
+                                )}{' '}
+                            </ul>
                         </div>
                     </div>
                 </main>

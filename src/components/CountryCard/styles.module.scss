@@ -1,6 +1,7 @@
 .countries-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 264px);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    padding: 0 1rem;
     gap: 4rem;
     justify-content: space-between;
 }
@@ -26,5 +27,21 @@
 
     .card-body {
         padding: 1rem;
+    }
+}
+
+@media only screen and (width <= 890px) {
+    .countries-grid {
+        padding: 0 1.5rem;
+    }
+}
+@media only screen and (width <= 610px) {
+    .countries-grid {
+        padding: 0 3rem;
+    }
+}
+@media only screen and (width <= 430px) {
+    .countries-grid {
+        padding: 0 1rem;
     }
 }

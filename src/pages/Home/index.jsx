@@ -12,7 +12,7 @@ import CountryCard from '@/components/CountryCard'
 
 export default function Home() {
     const URL = 'https://restcountries.com/v3.1/all'
-    const { data, error, isLoading } = useGetApiData(URL)
+    const { data, error } = useGetApiData(URL)
     const [filterByRegion, setFilterByRegion] = useState('')
     const [filterByText, setFilterByText] = useState('')
     const [countries, setCountries] = useState([])
@@ -20,30 +20,25 @@ export default function Home() {
     PageTitleUtils('Página Inicial')
 
     function handleSearch(e) {
-        setFilterByRegion('')
         setFilterByText(e.target.value)
     }
 
     useEffect(() => {
         function filter() {
-            let filtered
-
-            if (filterByRegion === '' && filterByText === '') {
-                return setCountries(data)
-            }
+            let filtered = data
 
             if (filterByRegion) {
-                setFilterByText('')
-                filtered = data.filter(country => country.region === filterByRegion)
+                filtered = filtered.filter(country => country.region === filterByRegion)
             }
 
             if (filterByText) {
-                filtered = data.filter(country =>
-                    country.name.common.toLowerCase().startsWith(filterByText.toLowerCase())
+                const searchText = filterByText.toLowerCase()
+                filtered = filtered.filter(country =>
+                    country.name.common.toLowerCase().startsWith(searchText)
                 )
             }
 
-            return setCountries(filtered)
+            setCountries(filtered)
         }
         filter()
     }, [filterByRegion, filterByText, data])
@@ -59,12 +54,12 @@ export default function Home() {
             </div>
 
             {error && <Navigate to="/error" />}
-            {isLoading && <Loading />}
+            {!countries && <Loading />}
 
             {countries && (
                 <CountryCard.Root>
                     {countries.map(country => (
-                        <CountryCard.Card key={country.ccn3} slug={country.ccn3}>
+                        <CountryCard.Card key={country.cca3} slug={country.cca3}>
                             <CountryCard.Img flag={country.flags.svg} alt={country.flags.alt} />
                             <CountryCard.Body>
                                 <CountryCard.Title name={country.name.common} />
