@@ -39,6 +39,8 @@
                 cursor: pointer;
                 padding: 0.75rem 1.5rem;
                 opacity: 0.75;
+                border-radius: 8px;
+                margin: 0 4px;
 
                 &:hover {
                     opacity: 1;
@@ -55,6 +57,12 @@
                 max-height: 300px;
                 padding: 0.75rem 0;
             }
+        }
+
+        .is-selected {
+            background-color: var(--elevation-1);
+            font-weight: 700;
+            opacity: 1;
         }
     }
 }

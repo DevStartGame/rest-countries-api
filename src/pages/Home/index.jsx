@@ -13,25 +13,46 @@ export default function Home() {
     const URL = 'https://restcountries.com/v3.1/all'
     const { data, error, isLoading } = useGetApiData(URL)
     const [filterByRegion, setFilterByRegion] = useState('')
+    const [filterByText, setFilterByText] = useState('')
     const [countries, setCountries] = useState([])
-    // const [filterByName, setFilterByName] = useState('')
+
+    function handleSearch(e) {
+        setFilterByRegion('')
+        setFilterByText(e.target.value)
+    }
 
     useEffect(() => {
         function filter() {
-            if (filterByRegion === '') {
+            let filtered
+
+            if (filterByRegion === '' && filterByText === '') {
                 return setCountries(data)
             }
 
-            setCountries(data.filter(country => country.region === filterByRegion))
+            if (filterByRegion) {
+                setFilterByText('')
+                filtered = data.filter(country => country.region === filterByRegion)
+            }
+
+            if (filterByText) {
+                filtered = data.filter(country =>
+                    country.name.common.toLowerCase().startsWith(filterByText.toLowerCase())
+                )
+            }
+
+            return setCountries(filtered)
         }
         filter()
-    }, [filterByRegion, data])
+    }, [filterByRegion, filterByText, data])
 
     return (
         <div className={`container`}>
             <div className={styles.row}>
-                <SearchBar />
-                <Filter onSelectRegion={region => setFilterByRegion(region)} />
+                <SearchBar searchText={filterByText} onSearch={handleSearch} />
+                <Filter
+                    filter={filterByRegion}
+                    onSelectRegion={region => setFilterByRegion(region)}
+                />
             </div>
 
             {error && <Navigate to="/error" />}
