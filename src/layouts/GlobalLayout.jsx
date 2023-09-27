@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router-dom'
-import NavBar from '@components/NavBar'
+import NavBar from '@/components/NavBar'
 const Body = document.querySelector('body')
 
 export default function GlobalLayout() {

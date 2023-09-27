@@ -1,23 +1,20 @@
 import styles from './styles.module.scss'
-import { useState, useEffect } from 'react'
-import { useParams, useNavigate } from 'react-router-dom'
-import { ArrowLeft } from '@components/Icons'
-import Loading from '@components/Loading'
-import { getCountry } from '@services/api'
+import { useParams, useNavigate, Navigate } from 'react-router-dom'
+
+// #Componentes
+import { ArrowLeft } from '@/components/Icons'
+import Loading from '@/components/Loading'
+import useGetApiData from '@/hooks/useGetApiData'
 
 export default function Details() {
-    const [country, setCountry] = useState(null)
     const { slug } = useParams()
-    const name = slug.replace(/-/g, ' ')
     const navigate = useNavigate()
+    const URL = `https://restcountries.com/v3.1/alpha/${slug}`
+    const { data, error, isLoading } = useGetApiData(URL)
 
     const handleGoBack = () => {
         navigate(-1)
     }
-
-    useEffect(() => {
-        getCountry(setCountry, name)
-    }, [name])
 
     return (
         <div className={`container ${styles.details}`}>
@@ -26,44 +23,43 @@ export default function Details() {
                 Back
             </button>
 
-            {!country && <Loading />}
-            {country && (
+            {error && <Navigate to="/error" />}
+            {isLoading && <Loading />}
+            {data && (
                 <main className={styles['country-details']}>
                     <div className={styles['img-wrapper']}>
-                        <img src={country[0].flags.svg} alt="country flag" />
+                        <img src={data[0].flags.svg} alt="country flag" />
                     </div>
 
                     <div className={styles['info-wrapper']}>
-                        <h1 className={styles.title}>{country[0].name.official}</h1>
+                        <h1 className={styles.title}>{data[0].name.official}</h1>
                         <div className={styles.info}>
                             <div className={styles['info-left']}>
                                 <dl>
                                     <dt>Native name:</dt>
-                                    <dd>{country[0].name.official}</dd>
+                                    <dd>{data[0].name.common}</dd>
                                     <dt>Population:</dt>
-                                    <dd>{country[0].population}</dd>
+                                    <dd>{data[0].population}</dd>
                                     <dt>Region:</dt>
-                                    <dd>{country[0].region}</dd>
+                                    <dd>{data[0].region}</dd>
                                     <dt>Sub region:</dt>
-                                    <dd>{country[0].subregion}</dd>
+                                    <dd>{data[0].subregion}</dd>
                                     <dt>Capital:</dt>
-                                    <dd>{country[0].capital[0]}</dd>
+                                    <dd>{data[0].capital[0]}</dd>
                                 </dl>
                             </div>
 
                             <div className={styles['info-left']}>
                                 <dl>
                                     <dt>Top Level Domain:</dt>
-                                    <dd>{country[0].tld[0]}</dd>
+                                    <dd>{data[0].tld[0]}</dd>
                                     <dt>Currencies:</dt>
                                     <dd>
-                                        {Object.values(country[0].currencies).map(
-                                            item => item.name
-                                        )}
+                                        {Object.values(data[0].currencies).map(item => item.name)}
                                     </dd>
                                     <dt>Languages:</dt>
                                     <dd>
-                                        {Object.values(country[0].languages)
+                                        {Object.values(data[0].languages)
                                             .map(item => item)
                                             .join(' - ')}
                                     </dd>
@@ -72,17 +68,16 @@ export default function Details() {
                         </div>
                         <div className={styles.border}>
                             <span>Border Countries:</span>
-                            <ul>
-                                {country[0].borders ? (
-                                    country[0].borders.map(item => (
+                            {/* <ul>
+                                {data[0].borders ? (
+                                    data[0].borders.map(item => (
                                         <li className={styles['border-item']} key={item}>
-                                            {item}
-                                        </li>
-                                    ))
+
+                                                               {item}
                                 ) : (
                                     <li className={styles['border-item']}>No Borders</li>
                                 )}
-                            </ul>
+                            </ul> */}
                         </div>
                     </div>
                 </main>
