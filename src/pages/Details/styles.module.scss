@@ -20,7 +20,7 @@
     .country-details {
         display: flex;
         gap: 2em;
-        user-select: text;
+        padding-bottom: 2rem;
 
         img {
             object-fit: contain;
@@ -36,6 +36,7 @@
             display: flex;
             flex-direction: column;
             flex: 1;
+            user-select: text;
 
             .title {
                 margin-top: 2.44rem;
@@ -47,18 +48,20 @@
                 margin-bottom: 4rem;
                 gap: 40px;
             }
-
-            .border-item {
-                display: inline-block;
-                margin-left: 1rem;
-                padding: 0.25rem 1rem;
-                background-color: var(--elevation-2);
-                box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.07), 0px 3px 4px 0px rgba(0, 0, 0, 0.07);
-                font-weight: 300;
-                line-height: 150%;
-            }
         }
     }
+}
+
+.border-item {
+    display: inline-block;
+    margin-bottom: 8px;
+    margin-left: 1rem;
+    padding: 0.25rem 1rem;
+    background-color: var(--elevation-2);
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.07), 0px 3px 4px 0px rgba(0, 0, 0, 0.07);
+    font-weight: 300;
+    line-height: 150%;
+    user-select: none;
 }
 
 dt,
@@ -70,7 +73,7 @@ ul {
 dt,
 span {
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 800;
     line-height: 1.5rem;
     margin-right: 0.25rem;
 }

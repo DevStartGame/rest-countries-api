@@ -1,48 +1,40 @@
 import styles from './styles.module.scss'
 import { useEffect, useState } from 'react'
+import { Navigate } from 'react-router-dom'
 import useGetApiData from '@/hooks/useGetApiData'
+import PageTitleUtils from '@/utils/PageTitleUtils'
 
-// components
+// #Componentes
 import SearchBar from '@/components/SearchBar'
 import Filter from '@/components/Filter'
 import Loading from '@/components/Loading'
 import CountryCard from '@/components/CountryCard'
-import { Navigate } from 'react-router-dom'
 
 export default function Home() {
     const URL = 'https://restcountries.com/v3.1/all'
-    const { data, error, isLoading } = useGetApiData(URL)
+    const { data, error } = useGetApiData(URL)
     const [filterByRegion, setFilterByRegion] = useState('')
     const [filterByText, setFilterByText] = useState('')
     const [countries, setCountries] = useState([])
 
+    PageTitleUtils('Página Inicial')
+
     function handleSearch(e) {
-        setFilterByRegion('')
         setFilterByText(e.target.value)
     }
 
     useEffect(() => {
-        function filter() {
-            let filtered
+        if (!data) return
 
-            if (filterByRegion === '' && filterByText === '') {
-                return setCountries(data)
-            }
+        const filteredCountries = data.filter(country => {
+            const regionMatches = !filterByRegion || country.region === filterByRegion
+            const textMatches =
+                !filterByText ||
+                country.name.common.toLowerCase().startsWith(filterByText.toLowerCase())
+            return regionMatches && textMatches
+        })
 
-            if (filterByRegion) {
-                setFilterByText('')
-                filtered = data.filter(country => country.region === filterByRegion)
-            }
-
-            if (filterByText) {
-                filtered = data.filter(country =>
-                    country.name.common.toLowerCase().startsWith(filterByText.toLowerCase())
-                )
-            }
-
-            return setCountries(filtered)
-        }
-        filter()
+        setCountries(filteredCountries)
     }, [filterByRegion, filterByText, data])
 
     return (
@@ -56,13 +48,16 @@ export default function Home() {
             </div>
 
             {error && <Navigate to="/error" />}
-            {isLoading && <Loading />}
+            {countries.length === 0 && !error && <Loading />}
 
-            {countries && (
+            {countries.length > 0 && (
                 <CountryCard.Root>
                     {countries.map(country => (
-                        <CountryCard.Card key={country.ccn3} slug={country.ccn3}>
-                            <CountryCard.Img flag={country.flags.svg} alt={country.flags.alt} />
+                        <CountryCard.Card key={country.cca3} slug={country.cca3}>
+                            <CountryCard.Img
+                                flag={country.flags.svg}
+                                alt={country.flags.alt ?? country.name.common}
+                            />
                             <CountryCard.Body>
                                 <CountryCard.Title name={country.name.common} />
                                 <CountryCard.Info label="Population" value={country.population} />
