@@ -1,8 +1,8 @@
 .countries-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minMax(260px, 1fr));
     padding: 0 1rem;
-    gap: 4rem;
+    gap: 2rem;
     justify-content: space-between;
 }
 
@@ -35,13 +35,14 @@
         padding: 0 1.5rem;
     }
 }
-@media only screen and (width <= 610px) {
+@media only screen and (width <= 615px) {
     .countries-grid {
-        padding: 0 3rem;
+        grid-template-columns: 0.8fr;
+        justify-content: center;
     }
 }
-@media only screen and (width <= 430px) {
+@media only screen and (width <= 480px) {
     .countries-grid {
-        padding: 0 1rem;
+        grid-template-columns: 1fr;
     }
 }
