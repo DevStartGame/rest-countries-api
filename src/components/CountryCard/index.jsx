@@ -2,27 +2,27 @@ import styles from './styles.module.scss'
 import { Link } from 'react-router-dom'
 
 function Root({ children }) {
-    return <main className={styles['countries-grid']}>{children}</main>
+    return <main className={styles.container}>{children}</main>
 }
 
 function Card({ slug, children }) {
     return (
-        <section className={styles['country-card']}>
+        <section className={styles.card}>
             <Link to={`/country-details/${slug}`}>{children}</Link>
         </section>
     )
 }
 
 function Img({ flag = '', alt = '' }) {
-    return <figure style={{ '--bgFlag': `url("${flag}")` }} alt={alt}></figure>
+    return <img className={styles.card__image} src={flag} alt={alt} />
 }
 
 function Body({ children }) {
-    return <div className={styles['card-body']}>{children}</div>
+    return <div className={styles.card__body}>{children}</div>
 }
 
 function Title({ name }) {
-    return <h3>{name}</h3>
+    return <h3 className={styles.card__title}>{name}</h3>
 }
 
 function Info({ label, value }) {
