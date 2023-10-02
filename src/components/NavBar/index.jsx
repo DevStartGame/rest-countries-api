@@ -9,9 +9,6 @@ export default function NavBar() {
 
     const toggleTheme = () => {
         setIsDarkMode(!isDarkMode)
-
-        // A lógica de alteração de tema pode vir aqui
-        // Por exemplo, você pode adicionar/remover uma classe CSS para alterar o tema
         Body.toggleAttribute('data-dark-theme')
     }
 

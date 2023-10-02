@@ -4,17 +4,18 @@ import apiService from '@/services/apiService'
 function useGetApiData(URL) {
     const [data, setData] = useState(null)
     const [error, setError] = useState(null)
-    const [isLoading, setIsLoading] = useState(false)
+    const [isLoading, setIsLoading] = useState(null)
 
     useEffect(() => {
-        setIsLoading(true)
-
         async function getData() {
+            setError(null)
+            setIsLoading(true)
+
             try {
-                const dataApi = await apiService(URL)
-                setData(dataApi.data)
+                const res = await apiService(URL)
+                setData(res.data)
             } catch (error) {
-                setError(error.message)
+                setError(error)
             } finally {
                 setIsLoading(false)
             }

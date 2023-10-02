@@ -6,9 +6,9 @@ export default function ErrorPage() {
     PageTitleUtils('Página de Erro')
 
     return (
-        <div className={styles.errorPage}>
-            <h1 className={styles.errorPage__text}>404 | Not Found</h1>
-            <Link to="/" className={styles.errorPage__button}>
+        <div className={styles.error_page}>
+            <h1 className={styles.error_text}>404 | Not Found</h1>
+            <Link to="/" className={styles.error_button}>
                 Back to Home
             </Link>
         </div>
