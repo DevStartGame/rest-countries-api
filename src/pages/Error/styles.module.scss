@@ -1,15 +1,13 @@
-.errorPage {
-    // height: 100%;
+.error_page {
     display: flex;
+    min-height: 100vh;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    padding: 4rem;
     background-color: var(--elevation-1);
 }
 
-.errorPage__text {
+.error_text {
     color: var(--text-error);
     text-transform: uppercase;
     font-size: 2rem;
@@ -21,7 +19,7 @@
     }
 }
 
-.errorPage__button {
+.error_button {
     padding: 0.75rem 2rem;
     margin-top: 1rem;
     background-color: var(--elevation-errorButton);

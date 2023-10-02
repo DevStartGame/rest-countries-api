@@ -14,20 +14,20 @@ function Card({ slug, children }) {
 }
 
 function Img({ flag = '', alt = '' }) {
-    return <img className={styles.card__image} src={flag} alt={alt} />
+    return <img className={styles.image} src={flag} alt={alt} />
 }
 
 function Body({ children }) {
-    return <div className={styles.card__body}>{children}</div>
+    return <div className={styles.body}>{children}</div>
 }
 
-function Title({ name }) {
-    return <h3 className={styles.card__title}>{name}</h3>
+function Title({ name = '' }) {
+    return <h3 className={styles.title}>{name}</h3>
 }
 
-function Info({ label, value }) {
+function Info({ label = '', value = '' }) {
     return (
-        <p>
+        <p className={styles.info}>
             <span>{label}:</span> {value}
         </p>
     )
