@@ -2,9 +2,9 @@ import styles from './styles.module.scss'
 import { useRef } from 'react'
 import { LuChevronUp } from 'react-icons/lu'
 
-const Regions = ['Africa', 'America', 'Asia', 'Europe', 'Oceania']
+const Regions = ['Africa', 'Americas', 'Asia', 'Europe', 'Oceania']
 
-export function Filter() {
+export default function Filter({ filter, onSelectRegion }) {
     const dropdownRef = useRef(null)
 
     const handleDropdown = () => {
@@ -13,7 +13,7 @@ export function Filter() {
 
     // eslint-disable-next-line no-unused-vars
     const handleFilterByRegion = region => {
-        // fetchCountries({ region })
+        onSelectRegion(region)
         handleDropdown()
     }
 
@@ -23,9 +23,12 @@ export function Filter() {
                 Filter by Region <LuChevronUp />
             </div>
             <div className={styles['dropdown-wrapper']}>
-                <a onClick={() => handleFilterByRegion(null)}>All Regions</a>
+                <a onClick={() => handleFilterByRegion('')}>All Regions</a>
                 {Regions.map(region => (
-                    <a key={region} onClick={() => handleFilterByRegion(region)}>
+                    <a
+                        className={region === filter ? styles['is-selected'] : ''}
+                        key={region}
+                        onClick={() => handleFilterByRegion(region)}>
                         {region}
                     </a>
                 ))}
