@@ -56,7 +56,7 @@ export default function Home() {
                 </div>
 
                 {error && <Navigate to="/error" />}
-                {(countries.length === 0 || isLoading) && <Loading />}
+                {countries.length === 0 && isLoading && <Loading />}
                 {countries.length === 0 && filterByText && (
                     <div className={styles.no_country}>No Country Found...</div>
                 )}
