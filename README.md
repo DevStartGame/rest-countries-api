@@ -1,3 +1,22 @@
+<style>
+
+    .container {
+        display:flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        text-align: center;
+    }
+
+    .flex {
+        flex: 0 1 100px;
+    }
+
+    a {
+        cursor: pointer;
+    }
+
+</style>
+
 # <center>:file_cabinet: Projeto React.js 01</center>
 
 <br>
@@ -19,10 +38,12 @@ Um aplicativo para fazer uma integração com o **[REST Countries API](https://r
 - [Links](#links)
 
 - [Funcionalidades](#funcionalidades)
+
   - [funcionalidades principais](#1-funcionalidades-principais)
   - [funcionalidades extras](#2-funcionalidades-extras)
 
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
+
   - [bibliotecas](#1-bibliotecas)
   - [outras](#2-outras)
 
@@ -46,6 +67,8 @@ Um aplicativo para fazer uma integração com o **[REST Countries API](https://r
 ## Frontend Mentor
 
 Esta é uma solução para o [desafio da API REST de países com alternância de tema de cores no Frontend Mentor](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca). Os desafios do Frontend Mentor ajudam você a melhorar suas habilidades de codificação através da construção de projetos realistas.
+
+<br>
 
 ## Screenshot
 
@@ -140,6 +163,8 @@ Também é recomendado a instalação das seguintes extensões para a organizaç
 
 ## Estrutura De Pastas
 
+<br>
+
 | Folder | Description |
 | ---:   | ----------- |
 | `assets/` | Serve para armazenar imagens (imagens leves, se forem pesadas sempre prefira hospedar em uma CDN), ícones, etc. |
@@ -214,11 +239,30 @@ Também é recomendado a instalação das seguintes extensões para a organizaç
 
 <br>
 
+<div class="container">
+    <div class="flex">
+        <a href="">
+        <img src="https://github.com/eriveltondasilva.png" alt="Foto de Erivelton Silva no GitHub"/>
+          Erivelton Silva
+        </a>
+    </div>
+    <!--  -->
+    <div class="flex">
+        <img src="https://github.com/eriveltondasilva.png" alt="Foto de Erivelton Silva no GitHub"/>
+          Erivelton Silva
+    </div>
+    <!--  -->
+    <div class="flex">
+        <img src="https://github.com/eriveltondasilva.png" alt="Foto de Erivelton Silva no GitHub"/>
+          Erivelton Silva
+    </div>
+</div>
+
 ## Git Flow
 
 ### 1. branches
 
-> main -»  &copy branch em produção
+> main -» branch em produção
 
 > dev -» branch para desenvolvimento
 
