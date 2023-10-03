@@ -250,6 +250,6 @@ Ficou convencionado que não seguiremos padrão, apenas que os commits devem ser
 
 ## Status Do Projeto
 
-:rocket: Projeto finalizado
+:heavy_check_mark: Projeto finalizado :rocket: :tada:
 
 <br>
