@@ -138,7 +138,7 @@ Também é recomendado a instalação das seguintes extensões para a organizaç
 
 <br>
 
-## Estrutura De Pastas[^1^]
+## Estrutura De Pastas
 
 | Folder | Description |
 | ---:   | ----------- |
@@ -150,6 +150,10 @@ Também é recomendado a instalação das seguintes extensões para a organizaç
 | `services/` | Aqui ficam as configurações de HTTP clientes, normalmente utilizando axios. |
 | `store/` | Ficam as definições de state managers, context api, zustand, redux. |
 | `utils/` | Funções utilitárias como formatCurrency, formatPhone, convertTimezone, parsePhone (javascript puro). |
+
+<br>
+
+> Esta estrutura de pasta foi inspirada na estrutura de João Bibiano, que se encontra no seguinte repositório: <br> <https://github.com/joaobibiano/react-js-project-structure-lesson/blob/main/README.md> .
 
 <br>
 
@@ -214,7 +218,7 @@ Também é recomendado a instalação das seguintes extensões para a organizaç
 
 ### 1. branches
 
-> main -» branch em produção
+> main -»  &copy branch em produção
 
 > dev -» branch para desenvolvimento
 
@@ -239,6 +243,6 @@ Ficou convencionado que não seguiremos padrão, apenas que os commits devem ser
 
 ## Status Do Projeto
 
-Projeto finalizado
+:rocket: Projeto finalizado
 
 <br>
