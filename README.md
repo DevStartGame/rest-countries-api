@@ -1,24 +1,3 @@
-<style>
-
-    .container {
-        display:flex;
-        flex-wrap: wrap;
-        gap: 8px;
-        text-align: center;
-    }
-
-    .flex {
-        flex: 0 1 100px;
-        margin-bottom: 10px;
-    }
-
-    a {
-        cursor: pointer;
-        font-decoration: none;
-    }
-
-</style>
-
 # <center>:file_cabinet: Projeto React.js 01</center>
 
 <br>
@@ -187,7 +166,7 @@ Também é recomendado a instalação das seguintes extensões para a organizaç
 
 ## Colaboradores
 
-<!-- <table>
+<table>
   <tr>
     <td align="center">
       <a href="https://github.com/eriveltondasilva">
@@ -239,54 +218,6 @@ Também é recomendado a instalação das seguintes extensões para a organizaç
     </td>
   </tr>
 </table>
-
--->
-
-<br>
-
-<div class="container">
-    <div class="flex">
-        <img src="https://github.com/eriveltondasilva.png" alt="Foto de Erivelton Silva no GitHub"/>
-        <a href="https://github.com/eriveltondasilva">
-            Erivelton Silva
-        </a>
-    </div>
-    <!--  -->
-    <div class="flex">
-        <img src="http://github.com/Luiz-Honorato.png" alt="Foto de Luiz Honorato no GitHub"/>
-        <a href="https://github.com/Luiz-Honorato">
-            Luiz Honorato
-        </a>
-    </div>
-    <!--  -->
-    <div class="flex">
-        <img src="http://github.com/derciojds.png" alt="Foto de Dercio JdS no GitHub"/>
-        <a href="https://github.com/derciojds">
-            Dercio JdS
-        </a>
-    </div>
-    <!--  -->
-    <div class="flex">
-        <img src="http://github.com/Edlavio.png" alt="Foto de Pedro Alberto no GitHub"/>
-        <a href="https://github.com/Edlavio">
-            Pedro Alberto
-        </a>
-    </div>
-    <!--  -->
-    <div class="flex">
-        <img src="http://github.com/Manuel-AC-Ventura.png" alt="Foto de Manuel Ventura no GitHub"/>
-        <a href="https://github.com/Manuel-AC-Ventura">
-            Manuel Ventura
-        </a>
-    </div>
-    <!--  -->
-    <div class="flex">
-        <img src="http://github.com/fxdias.png" alt="Foto de Fernando Ximenes no GitHub"/>
-        <a href="https://github.com/fxdias">
-            Fernando Ximenes
-        </a>
-    </div>
-</div>
 
 <br>
 
