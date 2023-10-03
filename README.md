@@ -177,23 +177,23 @@ Também é recomendado a instalação das seguintes extensões para a organizaç
       </a>
     </td>
     <td align="center">
-      <a href="http://github.com/Luiz-Honorato">
-        <img src="http://github.com/Luiz-Honorato.png" min-width="200px" alt="Foto de Luiz Honorato no GitHub"/><br>
+      <a href="https://github.com/Luiz-Honorato">
+        <img src="https://github.com/Luiz-Honorato.png" min-width="200px" alt="Foto de Luiz Honorato no GitHub"/><br>
         <sub>
           <b>Luiz Honorato</b>
         </sub>
       </a>
     </td>
     <td align="center">
-      <a href="http://github.com/derciojds">
-        <img src="http://github.com/derciojds.png" min-width="200px" alt="Foto de Dercio JdS no GitHub"/><br>
+      <a href="https://github.com/derciojds">
+        <img src="https://github.com/derciojds.png" min-width="200px" alt="Foto de Dercio JdS no GitHub"/><br>
         <sub>
           <b>Dercio JdS</b>
         </sub>
       </a>
     </td>
     <td align="center">
-      <a href="http://github.com/Edlavio">
+      <a href="https://github.com/Edlavio">
         <img src="https://github.com/Edlavio.png" min-width="200px" alt="Foto de Pedro Alberto no GitHub"/><br>
         <sub>
           <b>Pedro Alberto</b>
@@ -250,6 +250,6 @@ Ficou convencionado que não seguiremos padrão, apenas que os commits devem ser
 
 ## Status Do Projeto
 
-:heavy_check_mark: Projeto finalizado :rocket: :tada:
+:heavy_check_mark: Projeto finalizado :rocket::tada::tada:
 
 <br>
