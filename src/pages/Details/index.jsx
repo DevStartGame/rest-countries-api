@@ -28,7 +28,7 @@ export default function Details() {
             </button>
 
             {error && <Navigate to="/error" />}
-            {(!country || isLoading) && <Loading />}
+            {!country && isLoading && <Loading />}
 
             {country && (
                 <main className={styles.country_details}>
