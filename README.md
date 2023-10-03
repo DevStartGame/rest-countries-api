@@ -2,7 +2,7 @@
 
 <br>
 
-## :memo: Descrição
+## Descrição
 
 Um aplicativo para fazer uma integração com o **[REST Countries API](https://restcountries.com)** para extrair dados dos países e exibi-los na aplicação.
 
@@ -10,7 +10,7 @@ Um aplicativo para fazer uma integração com o **[REST Countries API](https://r
 
 ## Table of contents
 
-- [Descrição](#:memo:_descricao)
+- [Descrição](#descrição)
 
 - [Frontend Mentor](#frontend-mentor)
 
@@ -18,49 +18,49 @@ Um aplicativo para fazer uma integração com o **[REST Countries API](https://r
 
 - [Links](#links)
 
-- [Funcionalidades](#functionalities)
-  - funcionalidades principais
-  - funcionalidades extras
+- [Funcionalidades](#funcionalidades)
+  - [funcionalidades principais](#1-funcionalidades-principais)
+  - [funcionalidades extras](#2-funcionalidades-extras)
 
-- [Tecnologias Utilizadas](#technologies)
-  - bibliotecas
-  - outras
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+  - [bibliotecas](#1-bibliotecas)
+  - [outras](#2-outras)
 
-- [Rodando O Projeto](#play)
+- [Rodando O Projeto](#rodando-o-projeto)
 
-- [Extensões Do VS Code](#extensions)
+- [Extensões Do VS Code](#extensões-do-vs-code)
 
-- [Estrutura De Pastas](#folders)
+- [Estrutura De Pastas](#estrutura-de-pastas)
 
-- [Colaboradores](#collaborators)
+- [Colaboradores](#colaboradores)
 
 - [Git Flow](#git-flow)
-  - Branches
-  - pull requests
-  - commits
+  - [Branches](#1-branches)
+  - [pull requests](#2-pull-requests)
+  - [commits](#3-commits)
 
-- [Status Do Projeto](#status)
+- [Status Do Projeto](#status-do-projeto)
 
 <br>
 
-## Frontend Mentor {#custom-id}
+## Frontend Mentor
 
 Esta é uma solução para o [desafio da API REST de países com alternância de tema de cores no Frontend Mentor](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca). Os desafios do Frontend Mentor ajudam você a melhorar suas habilidades de codificação através da construção de projetos realistas.
 
-## :desktop_computer: Screenshot {#screenshot}
+## Screenshot
 
 ![Pré-visualização de design para a API de países REST com desafio de codificação do alternador de tema de cores](./screenshot.png)
 
 <br>
 
-## Links {#links}
+## Links
 
 - URL no Frontend Mentor: [Add solution URL here](https://your-solution-url.com)
 - URL do site em produção: [Add live site URL here](https://your-live-site-url.com)
 
 <br>
 
-## :books: Funcionalidades {#functionalities}
+## Funcionalidades
 
 O usuários devem ser capazes de:
 
@@ -84,7 +84,7 @@ O usuários devem ser capazes de:
 
 <br>
 
-## :wrench: Tecnologias Utilizadas {#technologies}
+## Tecnologias Utilizadas
 
 ### 1. bibliotecas
 
@@ -108,7 +108,7 @@ O usuários devem ser capazes de:
 
 <br>
 
-## :gear: Rodando O Projeto {#play}
+## Rodando O Projeto
 
 Para rodar o repositório na sua máquina, será necessário clonar o mesmo e dar os respectivos comandos para iniciar um servidor do projeto através do Vite:
 
@@ -122,7 +122,7 @@ npm run dev
 
 <br>
 
-## :paperclip: Extensões Do VS Code {#extensions}
+## Extensões Do VS Code
 
 Também é recomendado a instalação das seguintes extensões para a organização e padronização do projeto:
 
@@ -138,7 +138,7 @@ Também é recomendado a instalação das seguintes extensões para a organizaç
 
 <br>
 
-## :building_construction: Estrutura De Pastas[^1] {#folders}
+## Estrutura De Pastas[^1^]
 
 | Folder | Description |
 | ---:   | ----------- |
@@ -151,11 +151,9 @@ Também é recomendado a instalação das seguintes extensões para a organizaç
 | `store/` | Ficam as definições de state managers, context api, zustand, redux. |
 | `utils/` | Funções utilitárias como formatCurrency, formatPhone, convertTimezone, parsePhone (javascript puro). |
 
-[^1]: Esta estrutura de pasta foi inspirada da estrutura de João Bibiano, que se encontra no seguinte repositório: <https://github.com/joaobibiano/react-js-project-structure-lesson/blob/main/README.md> .
-
 <br>
 
-## :handshake: Colaboradores {#collaborators}
+## Colaboradores
 
 <table>
   <tr>
@@ -212,7 +210,7 @@ Também é recomendado a instalação das seguintes extensões para a organizaç
 
 <br>
 
-## 👨🏽‍💻 Git Flow {#git-flow}
+## Git Flow
 
 ### 1. branches
 
@@ -239,7 +237,7 @@ Ficou convencionado que não seguiremos padrão, apenas que os commits devem ser
 
 <br>
 
-## :dart: Status Do Projeto {#status}
+## Status Do Projeto
 
 Projeto finalizado
 
