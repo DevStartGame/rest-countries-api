@@ -1,8 +1,8 @@
-# :file_cabinet: Projeto React.js 01</h1>
+# <center>:file_cabinet: Projeto React.js 01</center>
 
 <br>
 
-## :memo: Descrição {#description}
+## :memo: Descrição
 
 Um aplicativo para fazer uma integração com o **[REST Countries API](https://restcountries.com)** para extrair dados dos países e exibi-los na aplicação.
 
@@ -10,7 +10,7 @@ Um aplicativo para fazer uma integração com o **[REST Countries API](https://r
 
 ## Table of contents
 
-- [Descrição](#description)
+- [Descrição](#:memo:_descricao)
 
 - [Frontend Mentor](#frontend-mentor)
 
@@ -43,7 +43,7 @@ Um aplicativo para fazer uma integração com o **[REST Countries API](https://r
 
 <br>
 
-## Frontend Mentor {#frontend-mentor}
+## Frontend Mentor {#custom-id}
 
 Esta é uma solução para o [desafio da API REST de países com alternância de tema de cores no Frontend Mentor](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca). Os desafios do Frontend Mentor ajudam você a melhorar suas habilidades de codificação através da construção de projetos realistas.
 
@@ -139,24 +139,6 @@ Também é recomendado a instalação das seguintes extensões para a organizaç
 <br>
 
 ## :building_construction: Estrutura De Pastas[^1] {#folders}
-
-> `assets`: Serve para armazenar imagens (imagens leves, se forem pesadas sempre prefira hospedar em uma CDN), ícones, etc.
-
-> ==components==: Componentes reutilizáveis da aplicação. Componentes que são unidades para sua aplicação, um button, um dropdown, um modal, etc.
-
-> ==hooks==: Essa pasta é utilizada para armazenar hooks que são genéricos, têm interação com hooks do React (useState, useEffect) e normalmente reutilizáveis e qualquer projeto, exemplos: useScreenSize, useLocalStorage, useSessionStorage, useUserActive.
-
-> ==layout==: Essa pasta é utilizada para os layouts.
-
-> ==pages==: As pages são as páginas que usam vários componentes. É essa a página que o usuário vai ver.
-
-> ==services==: Aqui ficam as configurações de HTTP clientes, normalmente utilizando axios.
-
-> ==store==: Ficam as definições de state managers, context api, zustand, redux.
-
-> ==utils==: Funções utilitárias como formatCurrency, formatPhone, convertTimezone, parsePhone (javascript puro).
-
-<br>
 
 | Folder | Description |
 | ---:   | ----------- |
@@ -260,3 +242,5 @@ Ficou convencionado que não seguiremos padrão, apenas que os commits devem ser
 ## :dart: Status Do Projeto {#status}
 
 Projeto finalizado
+
+<br>
