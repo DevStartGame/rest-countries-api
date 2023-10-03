@@ -9,10 +9,12 @@
 
     .flex {
         flex: 0 1 100px;
+        margin-bottom: 10px;
     }
 
     a {
         cursor: pointer;
+        font-decoration: none;
     }
 
 </style>
@@ -56,6 +58,7 @@ Um aplicativo para fazer uma integração com o **[REST Countries API](https://r
 - [Colaboradores](#colaboradores)
 
 - [Git Flow](#git-flow)
+
   - [Branches](#1-branches)
   - [pull requests](#2-pull-requests)
   - [commits](#3-commits)
@@ -166,15 +169,15 @@ Também é recomendado a instalação das seguintes extensões para a organizaç
 <br>
 
 | Folder | Description |
-| ---:   | ----------- |
-| `assets/` | Serve para armazenar imagens (imagens leves, se forem pesadas sempre prefira hospedar em uma CDN), ícones, etc. |
+| ---:   | --- |
+| `assets/`     | Serve para armazenar imagens (imagens leves, se forem pesadas sempre prefira hospedar em uma CDN), ícones, etc. |
 | `components/` | Componentes reutilizáveis da aplicação. Componentes que são unidades para sua aplicação, um button, um dropdown, um modal, etc. |
-| `hooks/` | Essa pasta é utilizada para armazenar hooks que são genéricos, têm interação com hooks do React (useState, useEffect) e normalmente reutilizáveis e qualquer projeto, exemplos: useScreenSize, useLocalStorage, useSessionStorage, useUserActive. |
-| `layout/` | Essa pasta é utilizada para os layouts. |
-| `pages/` | As pages são as páginas que usam vários componentes. É essa a página que o usuário vai ver. |
-| `services/` | Aqui ficam as configurações de HTTP clientes, normalmente utilizando axios. |
-| `store/` | Ficam as definições de state managers, context api, zustand, redux. |
-| `utils/` | Funções utilitárias como formatCurrency, formatPhone, convertTimezone, parsePhone (javascript puro). |
+| `hooks/`      | Essa pasta é utilizada para armazenar hooks que são genéricos, têm interação com hooks do React (useState, useEffect) e normalmente reutilizáveis e qualquer projeto, exemplos: useScreenSize, useLocalStorage, useSessionStorage, useUserActive. |
+| `layout/`     | Essa pasta é utilizada para os layouts. |
+| `pages/`      | As pages são as páginas que usam vários componentes. É essa a página que o usuário vai ver. |
+| `services/`   | Aqui ficam as configurações de HTTP clientes, normalmente utilizando axios. |
+| `store/`      | Ficam as definições de state managers, context api, zustand, redux. |
+| `utils/`      | Funções utilitárias como formatCurrency, formatPhone, convertTimezone, parsePhone (javascript puro). |
 
 <br>
 
@@ -184,7 +187,7 @@ Também é recomendado a instalação das seguintes extensões para a organizaç
 
 ## Colaboradores
 
-<table>
+<!-- <table>
   <tr>
     <td align="center">
       <a href="https://github.com/eriveltondasilva">
@@ -237,26 +240,55 @@ Também é recomendado a instalação das seguintes extensões para a organizaç
   </tr>
 </table>
 
+-->
+
 <br>
 
 <div class="container">
     <div class="flex">
-        <a href="">
         <img src="https://github.com/eriveltondasilva.png" alt="Foto de Erivelton Silva no GitHub"/>
-          Erivelton Silva
+        <a href="https://github.com/eriveltondasilva">
+            Erivelton Silva
         </a>
     </div>
     <!--  -->
     <div class="flex">
-        <img src="https://github.com/eriveltondasilva.png" alt="Foto de Erivelton Silva no GitHub"/>
-          Erivelton Silva
+        <img src="http://github.com/Luiz-Honorato.png" alt="Foto de Luiz Honorato no GitHub"/>
+        <a href="https://github.com/Luiz-Honorato">
+            Luiz Honorato
+        </a>
     </div>
     <!--  -->
     <div class="flex">
-        <img src="https://github.com/eriveltondasilva.png" alt="Foto de Erivelton Silva no GitHub"/>
-          Erivelton Silva
+        <img src="http://github.com/derciojds.png" alt="Foto de Dercio JdS no GitHub"/>
+        <a href="https://github.com/derciojds">
+            Dercio JdS
+        </a>
+    </div>
+    <!--  -->
+    <div class="flex">
+        <img src="http://github.com/Edlavio.png" alt="Foto de Pedro Alberto no GitHub"/>
+        <a href="https://github.com/Edlavio">
+            Pedro Alberto
+        </a>
+    </div>
+    <!--  -->
+    <div class="flex">
+        <img src="http://github.com/Manuel-AC-Ventura.png" alt="Foto de Manuel Ventura no GitHub"/>
+        <a href="https://github.com/Manuel-AC-Ventura">
+            Manuel Ventura
+        </a>
+    </div>
+    <!--  -->
+    <div class="flex">
+        <img src="http://github.com/fxdias.png" alt="Foto de Fernando Ximenes no GitHub"/>
+        <a href="https://github.com/fxdias">
+            Fernando Ximenes
+        </a>
     </div>
 </div>
+
+<br>
 
 ## Git Flow
 
